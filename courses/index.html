@@ -34,58 +34,22 @@
 <section class="catalog-section">
   <div class="container catalog-layout">
     <aside class="filters">
-      <div class="filter-box">
-        <h3>חיפוש</h3>
-        <input id="courseSearch" class="search-input" type="search" placeholder="חפש קורס...">
-      </div>
-      <div class="filter-box">
-        <h3>קטגוריה</h3>
-        <div class="filter-list">
-          <button class="active" data-category="הכל">כל הקורסים</button>
-          <button data-category="אופציות">אופציות</button>
-          <button data-category="אסטרטגיות">אסטרטגיות</button>
-          <button data-category="השקעות">השקעות</button>
-          <button data-category="מסחר יומי">מסחר יומי</button>
-          <button data-category="חוזים עתידיים">חוזים עתידיים</button>
-          <button data-category="אלגו טריידינג">אלגו טריידינג</button>
-          <button data-category="גידור">גידור וניהול סיכונים</button>
-          <button data-category="ניתוח דוחות כספיים">ניתוח דוחות כספיים</button>
-          <button data-category="מודלי מבנה שוק ופרופילי מסחר">מבנה שוק ופרופילים</button>
-          <button data-category="מודלים להערכת מגמות">מודלים להערכת מגמות</button>
-          <button data-category="מתחילים">מתחילים</button>
-        </div>
-      </div>
-      <div class="filter-box">
-        <h3>רמה</h3>
-        <div class="level-row">
-          <button class="active" data-level="הכל">הכל</button>
-          <button data-level="מתחילים">מתחילים</button>
-          <button data-level="ביניים">ביניים</button>
-          <button data-level="מתקדמים">מתקדמים</button>
-        </div>
-      </div>
+      <div class="filter-box"><h3>חיפוש</h3><input id="courseSearch" class="search-input" type="search" placeholder="חפש קורס..."></div>
+      <div class="filter-box"><h3>קטגוריה</h3><div class="filter-list">
+        <button class="active" data-category="הכל">כל הקורסים</button><button data-category="אופציות">אופציות</button><button data-category="אסטרטגיות">אסטרטגיות</button><button data-category="השקעות">השקעות</button><button data-category="מסחר יומי">מסחר יומי</button><button data-category="חוזים עתידיים">חוזים עתידיים</button><button data-category="אלגו טריידינג">אלגו טריידינג</button><button data-category="גידור">גידור וניהול סיכונים</button><button data-category="ניתוח דוחות כספיים">ניתוח דוחות כספיים</button><button data-category="מודלי מבנה שוק ופרופילי מסחר">מבנה שוק ופרופילים</button><button data-category="מודלים להערכת מגמות">מודלים להערכת מגמות</button><button data-category="מתחילים">מתחילים</button>
+      </div></div>
+      <div class="filter-box"><h3>רמה</h3><div class="level-row"><button class="active" data-level="הכל">הכל</button><button data-level="מתחילים">מתחילים</button><button data-level="ביניים">ביניים</button><button data-level="מתקדמים">מתקדמים</button></div></div>
     </aside>
 
     <div class="catalog-main">
-      <div class="catalog-toolbar">
-        <div><span class="eyebrow blue">לימוד מקצועי בעברית</span><h2>קורסים</h2></div>
-        <div class="toolbar-actions"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div>
-      </div>
+      <div class="catalog-toolbar"><div><span class="eyebrow blue">לימוד מקצועי בעברית</span><h2>קורסים</h2></div><div class="toolbar-actions"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div></div>
       <div id="allCoursesGrid" class="all-course-grid"></div>
     </div>
   </div>
 </section>
 </main>
 
-<footer>
-  <div class="container footer-grid">
-    <div><a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a><p>המרכז ללימודי מסחר והשקעות בשוק ההון בעברית.</p></div>
-    <div><h4>לימוד</h4><a href="/courses/">כל הקורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a></div>
-    <div><h4>תחומים</h4><a href="/courses/">אופציות</a><a href="/courses/">מסחר יומי</a><a href="/courses/">השקעות</a></div>
-    <div><h4>Trade2</h4><a href="/">דף הבית</a><a href="mailto:info@trade2.co.il">info@trade2.co.il</a></div>
-  </div>
-  <div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div>
-</footer>
-<script src="courses.js"></script>
+<footer><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a><p>המרכז ללימודי מסחר והשקעות בשוק ההון בעברית.</p></div><div><h4>לימוד</h4><a href="/courses/">כל הקורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a></div><div><h4>תחומים</h4><a href="/courses/">אופציות</a><a href="/courses/">מסחר יומי</a><a href="/courses/">השקעות</a></div><div><h4>Trade2</h4><a href="/">דף הבית</a><a href="mailto:info@trade2.co.il">info@trade2.co.il</a></div></div><div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div></footer>
+<script src="data-1.js"></script><script src="data-2.js"></script><script src="data-3.js"></script><script src="data-4.js"></script><script src="data-5.js"></script><script src="courses.js"></script>
 </body>
 </html>
