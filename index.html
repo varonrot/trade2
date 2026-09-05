@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Trade2 — קורסים מקצועיים בשוק ההון</title>
-  <meta name="description" content="Trade2 — ספריית קורסים מקצועית בשוק ההון: אופציות, מסחר יומי, ניתוח טכני, חוזים עתידיים, ניהול סיכונים והשקעות." />
+  <title>Trade2 — לימודי שוק ההון</title>
+  <meta name="description" content="Trade2 — קורסים מקצועיים בעברית בשוק ההון, אופציות, מסחר יומי, ניתוח טכני וניהול סיכונים." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -13,11 +13,9 @@
 <body>
 <header class="site-header">
   <div class="container nav">
-    <a class="brand" href="#top"><span class="brand-mark">↗</span><span>TRADE<b>2</b></span></a>
-    <nav>
-      <a href="#courses">קורסים</a><a href="#paths">מסלולי לימוד</a><a href="#topics">תחומי לימוד</a><a href="#advanced">מתקדמים</a><a href="#about">אודות</a>
-    </nav>
-    <a class="btn btn-orange" href="#courses">לכל הקורסים</a>
+    <a class="brand" href="#top" aria-label="Trade2"><span>TRADE</span><b>2</b></a>
+    <nav><a class="active" href="#top">דף הבית</a><a href="#topics">תחומי לימוד</a><a href="#paths">מסלולי לימוד</a><a href="#courses">כל הקורסים</a><a href="#about">אודות</a><a href="#contact">צור קשר</a></nav>
+    <a class="account-btn" href="#courses">כניסה לחשבון</a>
   </div>
 </header>
 
@@ -25,74 +23,54 @@
   <section class="hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <p class="eyebrow">TRADE2 • CAPITAL MARKETS EDUCATION</p>
-        <h1>ללמוד את השוק.<br><span>לסחור חכם יותר.</span></h1>
-        <p class="lead">ספריית לימודים מקצועית בעברית — מהצעד הראשון בשוק ההון ועד אופציות, מסחר יומי, חוזים עתידיים, ניתוח טכני ואסטרטגיות מתקדמות.</p>
-        <div class="hero-stats">
-          <div><strong>80+</strong><span>קורסים ומודולים</span></div>
-          <div><strong>3 רמות</strong><span>מתחילים עד מתקדמים</span></div>
-          <div><strong>פרקטי</strong><span>כלים מהעולם האמיתי</span></div>
-          <div><strong>24/7</strong><span>למידה בקצב שלך</span></div>
-        </div>
-        <div class="hero-actions"><a class="btn btn-orange" href="#courses">התחל ללמוד ←</a><a class="btn btn-outline" href="#paths">מצא מסלול לימוד</a></div>
+        <h1>לסחור חכם יותר<br><span>לבנות עתיד טוב יותר</span></h1>
+        <p class="lead">הדרכה מקצועית ומעשית למסחר בשוק ההון — קורסים מסודרים בעברית, מהבסיס ועד אסטרטגיות מתקדמות.</p>
+        <div class="hero-actions"><a class="btn primary" href="#courses">לכל הקורסים ←</a><a class="btn secondary" href="#paths">מצא מסלול לימוד</a></div>
+        <div class="hero-facts"><div><strong>80+</strong><span>קורסים מקצועיים</span></div><div><strong>3</strong><span>רמות לימוד</span></div><div><strong>24/7</strong><span>למידה בקצב שלך</span></div></div>
       </div>
-      <div class="hero-visual"></div>
+      <div class="hero-media-placeholder" aria-label="תמונת הירו תתווסף בהמשך"><div class="chart-lines"></div><div class="image-note">תמונת הירו תתווסף כאן</div></div>
     </div>
   </section>
 
-  <section class="section compact" id="topics">
-    <div class="container">
-      <p class="eyebrow orange">בחר תחום</p><h2>מה תרצה ללמוד?</h2>
-      <div class="topic-grid">
-        <article><div class="icon">📘</div><h3>שוק ההון למתחילים</h3><p>היסודות לפני העסקה הראשונה.</p></article>
-        <article><div class="icon">Θ</div><h3>מסחר באופציות</h3><p>CALL, PUT, יווניות ותנודתיות.</p></article>
-        <article><div class="icon">📈</div><h3>ניתוח טכני</h3><p>גרפים, מגמות ואינדיקטורים.</p></article>
-        <article><div class="icon">⚡</div><h3>מסחר יומי</h3><p>מבנה שוק, תזמון וניהול עסקה.</p></article>
-        <article><div class="icon">↗</div><h3>חוזים עתידיים</h3><p>שווקים, חוזים וכלים מתקדמים.</p></article>
-        <article><div class="icon">🛡</div><h3>ניהול סיכונים</h3><p>הון, חשיפה וגודל פוזיציה.</p></article>
-      </div>
-    </div>
-  </section>
+  <section class="benefit-strip"><div class="container benefit-grid">
+    <article><span class="benefit-icon">◆</span><div><h3>למידה מעשית</h3><p>קורסים ברורים וממוקדים</p></div></article>
+    <article><span class="benefit-icon">▥</span><div><h3>מדריכים מקצועיים</h3><p>תוכן מסודר מהבסיס למתקדם</p></div></article>
+    <article><span class="benefit-icon">▣</span><div><h3>גישה מכל מקום</h3><p>לומדים בזמן ובקצב שלך</p></div></article>
+    <article><span class="benefit-icon">●●●</span><div><h3>ספריית תוכן רחבה</h3><p>עשרות קורסים ומודולים</p></div></article>
+  </div></section>
 
-  <section class="section soft" id="paths">
-    <div class="container">
-      <div class="section-head"><div><p class="eyebrow orange">מסלול ברור במקום עומס</p><h2>מסלולי לימוד</h2></div><a href="#courses">לכל הקורסים ←</a></div>
-      <div class="path-grid">
-        <article class="path beginner"><span>מתחילים</span><h3>הדרך לשוק ההון</h3><p>מהמושגים הבסיסיים ועד קריאת גרף, ניהול עסקה והבנת השוק.</p><a href="#courses">התחל כאן ←</a></article>
-        <article class="path intermediate"><span>ביניים</span><h3>מסוחר ללומד שיטתי</h3><p>ניתוח טכני, מסחר יומי, ניהול סיכונים ואסטרטגיות עבודה מסודרות.</p><a href="#courses">המשך ללמוד ←</a></article>
-        <article class="path advanced"><span>מתקדמים</span><h3>אסטרטגיות מקצועיות</h3><p>אופציות מתקדמות, VIX, יווניות, חוזים עתידיים, מודלים וניהול פוזיציה.</p><a href="#advanced">לנושאים מתקדמים ←</a></article>
-      </div>
+  <section class="section topics-section" id="topics"><div class="container">
+    <div class="center-head"><h2>תחומי הלימוד שלנו</h2><span></span></div>
+    <div class="topic-cards">
+      <a href="#courses"><div class="topic-visual t1"></div><strong>מסחר באופציות</strong></a>
+      <a href="#courses"><div class="topic-visual t2"></div><strong>מסחר במניות</strong></a>
+      <a href="#courses"><div class="topic-visual t3"></div><strong>מסחר עולמי</strong></a>
+      <a href="#courses"><div class="topic-visual t4"></div><strong>ניהול סיכונים</strong></a>
+      <a href="#courses"><div class="topic-visual t5"></div><strong>אסטרטגיות מסחר</strong></a>
+      <a href="#courses"><div class="topic-visual t6"></div><strong>מסחר יומי</strong></a>
     </div>
-  </section>
+  </div></section>
 
-  <section class="section" id="courses">
-    <div class="container">
-      <div class="section-head"><div><p class="eyebrow orange">מתוך ספריית Trade2</p><h2>קורסים פופולריים</h2></div><a href="https://trade2.co.il/courses/" target="_blank" rel="noopener">לכל הקורסים ←</a></div>
-      <div id="courseGrid" class="course-grid"></div>
-    </div>
-  </section>
+  <section class="section courses-section" id="courses"><div class="container">
+    <div class="section-head"><div class="center-head left"><h2>קורסים פופולריים</h2><span></span></div><a href="https://trade2.co.il/courses/" target="_blank" rel="noopener">לכל הקורסים ←</a></div>
+    <div id="courseGrid" class="course-grid"></div>
+  </div></section>
 
-  <section class="section soft" id="advanced">
-    <div class="container">
-      <h2>ספריית האסטרטגיות והכלים</h2>
-      <div class="strategy-row"><span>Covered Call</span><span>Iron Condor</span><span>Calendar Spread</span><span>VIX</span><span>Delta</span><span>Theta</span><span>Vega</span><span>Volume Profile</span><span>Ichimoku</span><span>OTC</span></div>
-      <div class="dual-grid">
-        <article class="feature-card dark-blue"><p class="eyebrow">מסחר באופציות</p><h3>להבין מה באמת מזיז את מחיר האופציה</h3><p>יווניות, סטיית תקן, זמן, מבנה פוזיציה ואסטרטגיות מתקדמות.</p><a class="btn btn-outline" href="#courses">לקורסי אופציות ←</a></article>
-        <article class="feature-card dark-orange"><p class="eyebrow">ניהול סיכונים</p><h3>העסקה היא רק חצי מהסיפור</h3><p>ניהול הון, גודל פוזיציה, חשיפה, הגנות וקבלת החלטות לפני הכניסה.</p><a class="btn btn-outline" href="#courses">לקורסי ניהול סיכונים ←</a></article>
-      </div>
-    </div>
-  </section>
+  <section class="stats-band"><div class="container stats-grid"><div><strong>80+</strong><span>קורסים ומודולים</span></div><div><strong>3</strong><span>רמות לימוד</span></div><div><strong>10+</strong><span>תחומי מסחר והשקעות</span></div><div><strong>24/7</strong><span>גישה ללמידה</span></div></div></section>
 
-  <section class="section" id="about">
-    <div class="container dual-grid content-grid">
-      <article class="panel"><p class="eyebrow orange">למה Trade2</p><h2>לא רק לצפות. להבין.</h2><p class="body-copy">המטרה היא לבנות הבנה אמיתית של השוק — מהבסיס ועד הכלים שמשמשים סוחרים ומשקיעים מתקדמים. במקום אוסף סרטונים אקראי, Trade2 מרכזת ספריית קורסים רחבה שניתן להתקדם בה לפי תחום ורמה.</p><div class="benefits"><span>✓ תוכן בעברית</span><span>✓ קורסים בכל הרמות</span><span>✓ למידה עצמאית</span><span>✓ נושאים מעשיים ומתקדמים</span></div></article>
-      <article class="panel media-panel"><div class="media-image"></div><div><p class="eyebrow orange">ספריית Trade2</p><h2>עשרות קורסים. מסלול אחד קדימה.</h2><p class="body-copy">אופציות, השקעות, מסחר יומי, ניתוח טכני, חוזים עתידיים, דוחות כספיים וניהול סיכונים — במקום אחד.</p><a href="#courses">גלה את הספרייה ←</a></div></article>
-    </div>
-  </section>
+  <section class="section paths-section" id="paths"><div class="container">
+    <div class="center-head"><h2>מסלולי לימוד</h2><span></span><p>במקום ללכת לאיבוד בין עשרות קורסים, בוחרים מסלול ומתקדמים בצורה מסודרת.</p></div>
+    <div class="path-grid"><article><b>01</b><h3>מתחילים בשוק ההון</h3><p>מושגי יסוד, מבנה שוק, קריאת גרפים והיכרות עם עולם המסחר.</p><a href="#courses">למסלול ←</a></article><article><b>02</b><h3>מסחר פעיל</h3><p>ניתוח טכני, מסחר יומי, תזמון, ניהול עסקה וניהול סיכונים.</p><a href="#courses">למסלול ←</a></article><article><b>03</b><h3>אופציות ואסטרטגיות</h3><p>CALL, PUT, יווניות, תנודתיות ואסטרטגיות מתקדמות.</p><a href="#courses">למסלול ←</a></article></div>
+  </div></section>
 
-  <section class="newsletter"><div class="container newsletter-inner"><div><p class="eyebrow">השלב הבא</p><h2>בחר תחום והתחל לבנות ידע אמיתי בשוק ההון.</h2><p>התקדם בקצב שלך, מהבסיס ועד אסטרטגיות מקצועיות.</p></div><a class="btn btn-orange" href="#courses">התחל ללמוד</a></div></section>
+  <section class="promo-section"><div class="container promo-grid">
+    <div class="promo-copy"><h2>יותר מסתם קורסים.<br><span>זו דרך ללמוד נכון.</span></h2><p>Trade2 מרכזת ידע מעשי בשוק ההון במקום אחד — כדי שתוכל להתקדם בצורה מסודרת, ברורה ומקצועית.</p><a class="btn primary" href="#courses">הצטרפו עוד היום ←</a></div>
+    <div class="promo-media-placeholder"><div class="image-note">תמונת סקשן תתווסף כאן</div></div>
+  </div></section>
+
+  <section class="section about-section" id="about"><div class="container about-grid"><div><div class="section-title"><h2>למה Trade2?</h2></div><p>ספריית לימודים רחבה בעברית למסחר והשקעות בשוק ההון, מהיסודות ועד נושאים מתקדמים כמו אופציות, אסטרטגיות, VIX, חוזים עתידיים וניהול סיכונים.</p></div><div class="about-points"><div><strong>תוכן בעברית</strong><span>נוח, ברור ומסודר</span></div><div><strong>למידה בקצב שלך</strong><span>גישה מכל מקום ובכל זמן</span></div><div><strong>רמות לימוד ברורות</strong><span>מתחילים, ביניים ומתקדמים</span></div><div><strong>כלים מעשיים</strong><span>ידע שנבנה סביב מסחר אמיתי</span></div></div></div></section>
 </main>
 
-<footer><div class="container footer-grid"><div><a class="brand" href="#top"><span class="brand-mark">↗</span><span>TRADE<b>2</b></span></a><p>פלטפורמת לימודים למסחר והשקעות בשוק ההון.</p></div><div><h4>לימוד</h4><a href="#courses">קורסים</a><a href="#paths">מסלולי לימוד</a><a href="#topics">תחומי לימוד</a></div><div><h4>תחומים</h4><a href="#courses">אופציות</a><a href="#courses">מסחר יומי</a><a href="#courses">ניתוח טכני</a></div><div><h4>מתקדמים</h4><a href="#advanced">אסטרטגיות</a><a href="#advanced">יווניות</a><a href="#advanced">ניהול סיכונים</a></div><div><h4>Trade2</h4><a href="https://trade2.co.il" target="_blank" rel="noopener">האתר הנוכחי</a><a href="mailto:info@trade2.co.il">info@trade2.co.il</a></div></div><div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div></footer>
+<footer id="contact"><div class="container footer-grid"><div class="footer-brand"><a class="brand" href="#top"><span>TRADE</span><b>2</b></a><p>ללמוד. לסחור. להתקדם.</p></div><div><h4>אודות</h4><p>פלטפורמת לימודים מקצועית בעברית למסחר והשקעות בשוק ההון.</p></div><div><h4>קישורים מהירים</h4><a href="#courses">כל הקורסים</a><a href="#paths">מסלולי לימוד</a><a href="#topics">תחומי לימוד</a></div><div><h4>צור קשר</h4><a href="mailto:info@trade2.co.il">info@trade2.co.il</a><a href="https://trade2.co.il" target="_blank" rel="noopener">האתר הנוכחי</a></div></div><div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div></footer>
 <script src="app.js" defer></script><script>document.querySelectorAll('[data-current-year]').forEach(el=>el.textContent=new Date().getFullYear());</script>
 </body></html>
