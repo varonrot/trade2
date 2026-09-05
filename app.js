@@ -59,3 +59,13 @@ sharedMediaStyle.textContent=`
 }
 `;
 document.head.appendChild(sharedMediaStyle);
+
+// Route catalog links on the homepage to the new Trade2 courses page.
+document.querySelectorAll('a').forEach(a=>{
+  const txt=(a.textContent||'').trim();
+  if(a.getAttribute('href')==='https://trade2.co.il/courses/' || txt.includes('לכל הקורסים')){
+    a.setAttribute('href','/courses/');
+    a.removeAttribute('target');
+    a.removeAttribute('rel');
+  }
+});
