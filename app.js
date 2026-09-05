@@ -8,3 +8,24 @@ const courses=[
 ];
 const grid=document.getElementById('courseGrid');
 if(grid)grid.innerHTML=courses.map(c=>`<a class="course-card" href="${c.link}" target="_blank" rel="noopener"><div class="course-img" style="background-image:url('${c.image}')"></div><div class="course-body"><span class="tag">${c.category} • ${c.level}</span><h3>${c.title}</h3><div class="course-meta"><span>${c.duration}</span><span>למידה אונליין</span></div></div></a>`).join('');
+
+const sharedMediaStyle=document.createElement('style');
+sharedMediaStyle.textContent=`
+.hero:before{
+  background-image:linear-gradient(270deg,#061426 0%,rgba(6,20,38,.98) 28%,rgba(6,20,38,.78) 50%,rgba(6,20,38,.22) 74%,rgba(6,20,38,.08) 100%),linear-gradient(0deg,rgba(6,20,38,.25),rgba(6,20,38,.05)),url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/hero/options-trading-hero.webp')!important;
+  background-size:cover!important;
+  background-position:center right!important;
+  background-repeat:no-repeat!important;
+}
+.dark-blue{
+  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-greeks-bg.webp')!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+.dark-cyan{
+  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-futures-bg.webp')!important;
+  background-size:cover!important;
+  background-position:center!important;
+}
+`;
+document.head.appendChild(sharedMediaStyle);
