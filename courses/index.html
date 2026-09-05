@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>כל הקורסים | Trade2</title>
+<meta name="description" content="ספריית הקורסים המלאה של Trade2 — אופציות, השקעות, מסחר יומי, חוזים עתידיים, אלגו טריידינג, גידור, ניתוח דוחות ועוד.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="courses.css">
+</head>
+<body>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a>
+    <nav>
+      <a href="/">דף הבית</a><a class="active-nav" href="/courses/">קורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a><a href="/#strategies">אסטרטגיות</a><a href="/#guides">מדריכים</a>
+    </nav>
+    <a class="btn btn-blue" href="/#resources">התחל ללמוד</a>
+  </div>
+</header>
+
+<main>
+<section class="catalog-hero">
+  <div class="container catalog-hero-inner">
+    <p class="eyebrow">ספריית Trade2</p>
+    <h1>כל הקורסים במקום אחד</h1>
+    <p>82 קורסים במגוון תחומים — מהצעד הראשון בשוק ההון ועד אסטרטגיות וכלים מתקדמים.</p>
+  </div>
+</section>
+
+<section class="catalog-section">
+  <div class="container catalog-layout">
+    <aside class="filters">
+      <div class="filter-box">
+        <h3>חיפוש</h3>
+        <input id="courseSearch" class="search-input" type="search" placeholder="חפש קורס...">
+      </div>
+      <div class="filter-box">
+        <h3>קטגוריה</h3>
+        <div class="filter-list">
+          <button class="active" data-category="הכל">כל הקורסים</button>
+          <button data-category="אופציות">אופציות</button>
+          <button data-category="אסטרטגיות">אסטרטגיות</button>
+          <button data-category="השקעות">השקעות</button>
+          <button data-category="מסחר יומי">מסחר יומי</button>
+          <button data-category="חוזים עתידיים">חוזים עתידיים</button>
+          <button data-category="אלגו טריידינג">אלגו טריידינג</button>
+          <button data-category="גידור">גידור וניהול סיכונים</button>
+          <button data-category="ניתוח דוחות כספיים">ניתוח דוחות כספיים</button>
+          <button data-category="מודלי מבנה שוק ופרופילי מסחר">מבנה שוק ופרופילים</button>
+          <button data-category="מודלים להערכת מגמות">מודלים להערכת מגמות</button>
+          <button data-category="מתחילים">מתחילים</button>
+        </div>
+      </div>
+      <div class="filter-box">
+        <h3>רמה</h3>
+        <div class="level-row">
+          <button class="active" data-level="הכל">הכל</button>
+          <button data-level="מתחילים">מתחילים</button>
+          <button data-level="ביניים">ביניים</button>
+          <button data-level="מתקדמים">מתקדמים</button>
+        </div>
+      </div>
+    </aside>
+
+    <div class="catalog-main">
+      <div class="catalog-toolbar">
+        <div><span class="eyebrow blue">לימוד מקצועי בעברית</span><h2>קורסים</h2></div>
+        <div class="toolbar-actions"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div>
+      </div>
+      <div id="allCoursesGrid" class="all-course-grid"></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a><p>המרכז ללימודי מסחר והשקעות בשוק ההון בעברית.</p></div>
+    <div><h4>לימוד</h4><a href="/courses/">כל הקורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a></div>
+    <div><h4>תחומים</h4><a href="/courses/">אופציות</a><a href="/courses/">מסחר יומי</a><a href="/courses/">השקעות</a></div>
+    <div><h4>Trade2</h4><a href="/">דף הבית</a><a href="mailto:info@trade2.co.il">info@trade2.co.il</a></div>
+  </div>
+  <div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div>
+</footer>
+<script src="courses.js"></script>
+</body>
+</html>
