@@ -11,21 +11,51 @@ if(grid)grid.innerHTML=courses.map(c=>`<a class="course-card" href="${c.link}" t
 
 const sharedMediaStyle=document.createElement('style');
 sharedMediaStyle.textContent=`
+/* Shared Options America media, mirrored for Hebrew RTL composition */
 .hero:before{
-  background-image:linear-gradient(270deg,#061426 0%,rgba(6,20,38,.98) 28%,rgba(6,20,38,.78) 50%,rgba(6,20,38,.22) 74%,rgba(6,20,38,.08) 100%),linear-gradient(0deg,rgba(6,20,38,.25),rgba(6,20,38,.05)),url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/hero/options-trading-hero.webp')!important;
+  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/hero/options-trading-hero.webp')!important;
   background-size:cover!important;
-  background-position:center right!important;
+  background-position:center!important;
   background-repeat:no-repeat!important;
+  transform:scaleX(-1);
+  transform-origin:center;
+  z-index:0;
 }
-.dark-blue{
-  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-greeks-bg.webp')!important;
-  background-size:cover!important;
-  background-position:center!important;
+.hero:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:0;
+  pointer-events:none;
+  background:linear-gradient(270deg,#061426 0%,rgba(6,20,38,.98) 27%,rgba(6,20,38,.80) 49%,rgba(6,20,38,.28) 73%,rgba(6,20,38,.10) 100%);
 }
-.dark-cyan{
-  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-futures-bg.webp')!important;
-  background-size:cover!important;
-  background-position:center!important;
+.hero-grid{position:relative;z-index:1!important;}
+
+.feature-card{background-image:none!important;position:relative;isolation:isolate;}
+.feature-card:after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:-2;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+  transform:scaleX(-1);
+  transform-origin:center;
+}
+.dark-blue:after{
+  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-greeks-bg.webp');
+}
+.dark-cyan:after{
+  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-futures-bg.webp');
+}
+.dark-blue:before{
+  z-index:-1!important;
+  background:linear-gradient(270deg,rgba(5,20,43,.98) 0%,rgba(5,20,43,.90) 45%,rgba(5,20,43,.36) 76%,rgba(5,20,43,.08) 100%)!important;
+}
+.dark-cyan:before{
+  z-index:-1!important;
+  background:linear-gradient(270deg,rgba(3,43,64,.98) 0%,rgba(3,43,64,.90) 45%,rgba(3,43,64,.36) 76%,rgba(3,43,64,.08) 100%)!important;
 }
 `;
 document.head.appendChild(sharedMediaStyle);
