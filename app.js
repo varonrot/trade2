@@ -69,3 +69,13 @@ document.querySelectorAll('a').forEach(a=>{
     a.removeAttribute('rel');
   }
 });
+
+// Connect the three homepage learning-path cards to their dedicated pages.
+document.querySelectorAll('.path-grid .path').forEach(card=>{
+  const title=(card.querySelector('h3')?.textContent||'').trim();
+  const link=card.querySelector('a');
+  if(!link)return;
+  if(title.includes('המתחיל')) link.href='/learning-paths/beginner/';
+  else if(title.includes('מסחר פעיל')) link.href='/learning-paths/active-trading/';
+  else if(title.includes('אסטרטגיות')) link.href='/learning-paths/advanced/';
+});
