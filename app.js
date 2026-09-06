@@ -9,6 +9,14 @@ const courses=[
 const grid=document.getElementById('courseGrid');
 if(grid)grid.innerHTML=courses.map(c=>`<a class="course-card" href="${c.link}" target="_blank" rel="noopener"><div class="course-img" style="background-image:url('${c.image}')"></div><div class="course-body"><span class="tag">${c.category} • ${c.level}</span><h3>${c.title}</h3><div class="course-meta"><span>${c.duration}</span><span>למידה אונליין</span></div></div></a>`).join('');
 
+const faviconHref='https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/options-america-favicon.png';
+['icon','apple-touch-icon'].forEach(rel=>{
+  let el=document.querySelector(`link[rel="${rel}"]`);
+  if(!el){el=document.createElement('link');el.rel=rel;document.head.appendChild(el);}
+  el.href=faviconHref;
+  if(rel==='icon'){el.type='image/png';el.sizes='128x128';}
+});
+
 const sharedMediaStyle=document.createElement('style');
 sharedMediaStyle.textContent=`
 /* Shared Options America media, mirrored for Hebrew RTL composition */
@@ -30,47 +38,22 @@ sharedMediaStyle.textContent=`
   background:linear-gradient(270deg,#061426 0%,rgba(6,20,38,.98) 27%,rgba(6,20,38,.80) 49%,rgba(6,20,38,.28) 73%,rgba(6,20,38,.10) 100%);
 }
 .hero-grid{position:relative;z-index:1!important;}
-
 .feature-card{background-image:none!important;position:relative;isolation:isolate;}
-.feature-card:after{
-  content:"";
-  position:absolute;
-  inset:0;
-  z-index:-2;
-  background-size:cover;
-  background-position:center;
-  background-repeat:no-repeat;
-  transform:scaleX(-1);
-  transform-origin:center;
-}
-.dark-blue:after{
-  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-greeks-bg.webp');
-}
-.dark-cyan:after{
-  background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-futures-bg.webp');
-}
-.dark-blue:before{
-  z-index:-1!important;
-  background:linear-gradient(270deg,rgba(5,20,43,.98) 0%,rgba(5,20,43,.90) 45%,rgba(5,20,43,.36) 76%,rgba(5,20,43,.08) 100%)!important;
-}
-.dark-cyan:before{
-  z-index:-1!important;
-  background:linear-gradient(270deg,rgba(3,43,64,.98) 0%,rgba(3,43,64,.90) 45%,rgba(3,43,64,.36) 76%,rgba(3,43,64,.08) 100%)!important;
-}
+.feature-card:after{content:"";position:absolute;inset:0;z-index:-2;background-size:cover;background-position:center;background-repeat:no-repeat;transform:scaleX(-1);transform-origin:center;}
+.dark-blue:after{background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-greeks-bg.webp');}
+.dark-cyan:after{background-image:url('https://raw.githubusercontent.com/varonrot/options-america/main/assets/images/features/options-futures-bg.webp');}
+.dark-blue:before{z-index:-1!important;background:linear-gradient(270deg,rgba(5,20,43,.98) 0%,rgba(5,20,43,.90) 45%,rgba(5,20,43,.36) 76%,rgba(5,20,43,.08) 100%)!important;}
+.dark-cyan:before{z-index:-1!important;background:linear-gradient(270deg,rgba(3,43,64,.98) 0%,rgba(3,43,64,.90) 45%,rgba(3,43,64,.36) 76%,rgba(3,43,64,.08) 100%)!important;}
 `;
 document.head.appendChild(sharedMediaStyle);
 
-// Route catalog links on the homepage to the new Trade2 courses page.
 document.querySelectorAll('a').forEach(a=>{
   const txt=(a.textContent||'').trim();
   if(a.getAttribute('href')==='https://trade2.co.il/courses/' || txt.includes('לכל הקורסים')){
-    a.setAttribute('href','/courses/');
-    a.removeAttribute('target');
-    a.removeAttribute('rel');
+    a.setAttribute('href','/courses/');a.removeAttribute('target');a.removeAttribute('rel');
   }
 });
 
-// Connect the three homepage learning-path cards to their dedicated pages.
 document.querySelectorAll('.path-grid .path').forEach(card=>{
   const title=(card.querySelector('h3')?.textContent||'').trim();
   const link=card.querySelector('a');
