@@ -29,9 +29,9 @@
           <div class="pill"><span>Trade2</span><b>מלימוד ראשון למסחר בטוח יותר</b></div>
 
           <h1>
-            לומדים <span id="typed" class="typed"></span><br>
-            בלי ללכת לאיבוד בין<br>
-            עשרות קורסים.
+            קורסי מסחר בשוק ההון<br>
+            מ־<span id="typed" class="typed"></span> ועד<br>
+            אסטרטגיות מתקדמות
           </h1>
 
           <p>
@@ -74,7 +74,7 @@
   </main>
 
 <script>
-const words=["שוק ההון","מסחר יומי","ניתוח טכני","מסחר באופציות"];
+const words=["אופציות","חוזים עתידיים","אלגו","מסחר יומי"];
 let wi=0,ci=0,deleting=false;
 function tick(){const el=document.getElementById('typed');if(!el)return;const w=words[wi];let speed=deleting?45:85;if(!deleting){ci++;el.textContent=w.slice(0,ci);if(ci===w.length){deleting=true;speed=1000}}else{ci--;el.textContent=w.slice(0,Math.max(ci,0));if(ci===0){deleting=false;wi=(wi+1)%words.length;speed=320}}setTimeout(tick,speed)}
 document.addEventListener('DOMContentLoaded',tick);
