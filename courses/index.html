@@ -4,52 +4,109 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>כל הקורסים | Trade2</title>
-<meta name="description" content="ספריית הקורסים המלאה של Trade2 — אופציות, השקעות, מסחר יומי, חוזים עתידיים, אלגו טריידינג, גידור, ניתוח דוחות ועוד.">
+<meta name="description" content="ספריית הקורסים והדשבורד הלימודי של Trade2 — אופציות, השקעות, מסחר יומי, חוזים עתידיים, אלגו טריידינג ועוד.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="../styles.css">
 <link rel="stylesheet" href="courses.css">
 </head>
 <body>
-<header class="site-header">
-  <div class="container nav">
-    <a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a>
-    <nav>
-      <a href="/">דף הבית</a><a class="active-nav" href="/courses/">קורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a><a href="/#strategies">אסטרטגיות</a><a href="/#guides">מדריכים</a>
+<div class="student-shell">
+  <aside class="student-sidebar">
+    <a class="side-brand" href="/index2.html"><span class="side-logo-mark">T2</span><span>TRADE<b>2</b></span></a>
+    <nav class="side-nav">
+      <a href="#dashboard"><span>⌂</span>דשבורד</a>
+      <a class="active" href="#all-courses"><span>▣</span>כל הקורסים</a>
+      <a href="#my-courses"><span>▶</span>המשך ללמוד</a>
+      <a href="/learning-paths/beginner/"><span>◆</span>מסלולי לימוד</a>
+      <div class="side-sep"></div>
+      <a href="#all-courses" data-side-category="אופציות"><span>↗</span>אופציות</a>
+      <a href="#all-courses" data-side-category="מסחר יומי"><span>▥</span>מסחר יומי</a>
+      <a href="#all-courses" data-side-category="אלגו טריידינג"><span>◎</span>אלגו טרייד</a>
+      <a href="#all-courses" data-side-category="חוזים עתידיים"><span>▤</span>חוזים עתידיים</a>
+      <a href="#all-courses" data-side-category="השקעות"><span>◔</span>השקעות</a>
+      <div class="side-sep"></div>
+      <a href="#my-courses"><span>♡</span>מועדפים</a>
+      <a href="#progress"><span>♜</span>ההתקדמות שלי</a>
+      <a href="#"><span>⚙</span>הגדרות</a>
     </nav>
-    <a class="btn btn-blue" href="/#resources">התחל ללמוד</a>
-  </div>
-</header>
-
-<main>
-<section class="catalog-hero">
-  <div class="container catalog-hero-inner">
-    <p class="eyebrow">ספריית Trade2</p>
-    <h1>כל הקורסים במקום אחד</h1>
-    <p>82 קורסים במגוון תחומים — מהצעד הראשון בשוק ההון ועד אסטרטגיות וכלים מתקדמים.</p>
-  </div>
-</section>
-
-<section class="catalog-section">
-  <div class="container catalog-layout">
-    <aside class="filters">
-      <div class="filter-box"><h3>חיפוש</h3><input id="courseSearch" class="search-input" type="search" placeholder="חפש קורס..."></div>
-      <div class="filter-box"><h3>קטגוריה</h3><div class="filter-list">
-        <button class="active" data-category="הכל">כל הקורסים</button><button data-category="אופציות">אופציות</button><button data-category="אסטרטגיות">אסטרטגיות</button><button data-category="השקעות">השקעות</button><button data-category="מסחר יומי">מסחר יומי</button><button data-category="חוזים עתידיים">חוזים עתידיים</button><button data-category="אלגו טריידינג">אלגו טריידינג</button><button data-category="גידור">גידור וניהול סיכונים</button><button data-category="ניתוח דוחות כספיים">ניתוח דוחות כספיים</button><button data-category="מודלי מבנה שוק ופרופילי מסחר">מבנה שוק ופרופילים</button><button data-category="מודלים להערכת מגמות">מודלים להערכת מגמות</button><button data-category="מתחילים">מתחילים</button>
-      </div></div>
-      <div class="filter-box"><h3>רמה</h3><div class="level-row"><button class="active" data-level="הכל">הכל</button><button data-level="מתחילים">מתחילים</button><button data-level="ביניים">ביניים</button><button data-level="מתקדמים">מתקדמים</button></div></div>
-    </aside>
-
-    <div class="catalog-main">
-      <div class="catalog-toolbar"><div><span class="eyebrow blue">לימוד מקצועי בעברית</span><h2>קורסים</h2></div><div class="toolbar-actions"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div></div>
-      <div id="allCoursesGrid" class="all-course-grid"></div>
+    <div class="login-card">
+      <strong>שמרו את ההתקדמות</strong>
+      <p>התחברו עם Google כדי לשמור קורסים, התקדמות ומועדפים.</p>
+      <button type="button" class="google-btn">G&nbsp;&nbsp;התחברות עם Google</button>
+      <span>או המשיכו כאורח</span>
     </div>
-  </div>
-</section>
-</main>
+  </aside>
 
-<footer><div class="container footer-grid"><div><a class="brand" href="/"><span class="brand-icon">↗</span><span>TRADE<b>2</b></span></a><p>המרכז ללימודי מסחר והשקעות בשוק ההון בעברית.</p></div><div><h4>לימוד</h4><a href="/courses/">כל הקורסים</a><a href="/#paths">מסלולי לימוד</a><a href="/#topics">תחומי לימוד</a></div><div><h4>תחומים</h4><a href="/courses/">אופציות</a><a href="/courses/">מסחר יומי</a><a href="/courses/">השקעות</a></div><div><h4>Trade2</h4><a href="/">דף הבית</a><a href="mailto:info@trade2.co.il">info@trade2.co.il</a></div></div><div class="container copyright">© <span data-current-year></span> Trade2 · התוכן הינו לימודי בלבד ואינו מהווה ייעוץ השקעות.</div></footer>
+  <div class="student-main">
+    <header class="student-topbar">
+      <div class="top-search"><span>⌕</span><input id="courseSearch" type="search" placeholder="חיפוש קורסים, נושאים או אסטרטגיות..."></div>
+      <div class="top-actions"><button class="guest-btn">המשך כאורח</button><button class="google-top">G&nbsp;&nbsp;התחברות עם Google</button><span class="lang">HE</span></div>
+    </header>
+
+    <main>
+      <section class="dashboard-hero" id="dashboard">
+        <div class="hero-content">
+          <span class="hero-kicker">מרכז הלמידה של Trade2</span>
+          <h1>התחילו ללמוד ולהתקדם<br>במסלול שמתאים לכם.</h1>
+          <p>קורסים מקצועיים בשוק ההון — מהבסיס ועד אסטרטגיות מתקדמות, עם סביבת למידה אישית במקום אחד.</p>
+          <div class="hero-stats">
+            <div><strong id="availableCourses">82</strong><span>קורסים זמינים</span></div>
+            <div><strong>3</strong><span>מסלולי לימוד</span></div>
+            <div><strong>10+</strong><span>תחומי התמחות</span></div>
+            <div><strong>24/7</strong><span>לימוד בקצב שלך</span></div>
+          </div>
+        </div>
+        <div class="hero-ai-panel">
+          <div class="ai-badge"><i></i> משולב בינה מלאכותית</div>
+          <h3>פעילות למידה חכמה</h3>
+          <p>המערכת מזהה דפוסי לימוד ומסייעת לארגן את ההתקדמות.</p>
+          <div class="ai-bars" id="aiBars" aria-label="פעילות AI חיה"></div>
+          <div class="ai-live"><span class="live-dot"></span> עדכון חי כל שנייה</div>
+        </div>
+      </section>
+
+      <section class="dashboard-row" id="progress">
+        <article class="profile-card panel">
+          <div class="panel-title">הפרופיל שלי</div>
+          <div class="profile-top"><div class="default-avatar">👤</div><div><strong>לומד אורח</strong><span>התחברו כדי להפוך את המסך לאישי</span></div></div>
+          <div class="profile-metrics"><div><b>0</b><span>קורסים שמורים</span></div><div><b>0</b><span>מסלולים</span></div><div><b>0%</b><span>התקדמות</span></div></div>
+          <button class="google-btn wide">G&nbsp;&nbsp;התחברות ושמירת התקדמות</button>
+        </article>
+
+        <article class="progress-card panel">
+          <div class="panel-title">התקדמות הלמידה שלי <span>תצוגה לדוגמה</span></div>
+          <div class="donut-wrap"><div class="donut"><b>68%</b><span>הושלם</span></div><div class="donut-legend"><p><i class="g"></i> הושלמו <b>10</b></p><p><i class="b"></i> במהלך לימוד <b>8</b></p><p><i class="o"></i> טרם התחלתם <b>4</b></p><hr><p>סה״כ קורסים <b>22</b></p></div></div>
+        </article>
+
+        <div class="metric-stack">
+          <article class="metric-card panel"><span class="metric-icon">◷</span><div><small>זמן לימוד</small><strong>12ש׳ 14ד׳</strong><em>דוגמה לאחר התחברות</em></div><div class="spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          <article class="metric-card panel"><span class="metric-icon">▥</span><div><small>שיעורים שנצפו</small><strong>18</strong><em>השבוע</em></div><div class="spark purple"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+        </div>
+      </section>
+
+      <section class="my-courses-section" id="my-courses">
+        <div class="section-head"><div><span>תצוגה מקדימה</span><h2>הקורסים שלי</h2></div><a href="#all-courses">הצג את כל הקורסים ←</a></div>
+        <div class="my-courses-grid">
+          <article class="my-course"><img src="https://trade2.co.il/wp-content/uploads/2024/10/49-1.png" alt=""><div><span>אופציות · מתחילים</span><h3>אופציות למתחילים</h3><div class="progress-line"><i style="width:62%"></i></div><small>62% · שיעור 12 מתוך 20</small><a href="/courses/option1/">המשך ללמוד</a></div></article>
+          <article class="my-course"><img src="https://trade2.co.il/wp-content/uploads/2024/10/42-1.png" alt=""><div><span>אסטרטגיות</span><h3>Iron Condor</h3><div class="progress-line"><i style="width:35%"></i></div><small>35% · שיעור 4 מתוך 12</small><a href="#">המשך ללמוד</a></div></article>
+          <article class="my-course"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div><span>השקעות</span><h3>השקעה בתעודות סל</h3><div class="progress-line"><i style="width:20%"></i></div><small>20% · שיעור 3 מתוך 15</small><a href="#">המשך ללמוד</a></div></article>
+          <article class="login-preview"><span class="lock">⌾</span><h3>התחברו כדי לראות את הקורסים שלכם כאן</h3><p>שמירת התקדמות, מועדפים והמשך לימוד מכל מכשיר.</p><button class="google-btn">G&nbsp;&nbsp;התחברות עם Google</button></article>
+        </div>
+      </section>
+
+      <section class="catalog-section" id="all-courses">
+        <div class="catalog-header"><div><span class="blue-kicker">ספריית Trade2</span><h2>כל הקורסים</h2></div><div class="course-count"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div></div>
+        <div class="filter-chips">
+          <button class="active" data-category="הכל">הכל</button><button data-category="אופציות">אופציות</button><button data-category="מסחר יומי">מסחר יומי</button><button data-category="אלגו טריידינג">אלגו</button><button data-category="חוזים עתידיים">חוזים</button><button data-category="השקעות">השקעות</button><button data-category="מתחילים">מתחילים</button><button data-category="אסטרטגיות">אסטרטגיות</button>
+        </div>
+        <div class="level-row"><button class="active" data-level="הכל">כל הרמות</button><button data-level="מתחילים">מתחילים</button><button data-level="ביניים">ביניים</button><button data-level="מתקדמים">מתקדמים</button></div>
+        <div id="allCoursesGrid" class="all-course-grid"></div>
+      </section>
+    </main>
+  </div>
+</div>
+
 <script src="data-1.js"></script><script src="data-2.js"></script><script src="data-3.js"></script><script src="data-4.js"></script><script src="data-5.js"></script><script src="courses.js"></script>
 </body>
 </html>
