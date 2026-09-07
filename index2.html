@@ -132,7 +132,7 @@
         </div>
       </div>
       <div class="footer-bottom">
-        <span>© 2026 Trade2 · התוכן באתר הוא לימודי בלבד ואינו מהווה ייעוץ השקעות.</span>
+        <span>© <span id="current-year"></span> Trade2 · התוכן באתר הוא לימודי בלבד ואינו מהווה ייעוץ השקעות.</span>
         <span>v2.0</span>
       </div>
     </div>
@@ -142,7 +142,11 @@
 const words=["אופציות","מניות","אלגו טרייד","מסחר יומי"];
 let wi=0,ci=0,deleting=false;
 function tick(){const el=document.getElementById('typed');if(!el)return;const w=words[wi];let speed=deleting?45:85;if(!deleting){ci++;el.textContent=w.slice(0,ci);if(ci===w.length){deleting=true;speed=1000}}else{ci--;el.textContent=w.slice(0,Math.max(ci,0));if(ci===0){deleting=false;wi=(wi+1)%words.length;speed=320}}setTimeout(tick,speed)}
-document.addEventListener('DOMContentLoaded',tick);
+document.addEventListener('DOMContentLoaded',()=>{
+  tick();
+  const yearEl=document.getElementById('current-year');
+  if(yearEl) yearEl.textContent=new Date().getFullYear();
+});
 </script>
 </body>
 </html>
