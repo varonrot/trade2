@@ -1,0 +1,77 @@
+/* Compact premium student dashboard - v2 */
+@media (min-width:981px){
+  .student-shell{grid-template-columns:minmax(0,1fr) 180px!important}
+  .student-sidebar{padding:14px 12px!important}
+  .side-brand{font-size:20px!important;padding-bottom:12px!important}
+  .side-logo-mark{width:31px!important;height:31px!important}
+  .side-nav{gap:2px!important}
+  .side-nav a{padding:7px 9px!important;font-size:12px!important;border-radius:7px!important}
+  .side-nav a span{width:18px!important;font-size:14px!important}
+  .side-sep{margin:5px 0!important}
+
+  .student-topbar{height:54px!important;padding:0 16px!important}
+  .top-search{height:34px!important;width:min(410px,36vw)!important}
+  .guest-btn,.google-top,.google-btn{padding:6px 10px!important;font-size:11px!important}
+
+  main{padding:12px 16px 28px!important}
+
+  .compact-dashboard{grid-template-columns:215px minmax(0,1fr) 205px!important;gap:10px!important;align-items:stretch!important}
+  .activity-panel,.profile-compact{padding:12px!important;min-height:152px!important}
+  .panel-mini-head strong{font-size:13px!important}
+  .panel-mini-head span{font-size:9px!important}
+  .compact-bars{height:70px!important;margin-top:7px!important}
+  .day-row{font-size:8px!important;margin-top:3px!important}
+
+  .welcome-block{padding:2px 6px!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
+  .welcome-block h1{font-size:25px!important;line-height:1.08!important;margin:2px 0 4px!important}
+  .welcome-block p{font-size:11px!important;margin-bottom:9px!important}
+  .hero-kicker,.blue-kicker{font-size:10px!important}
+  .quick-metrics{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:7px!important}
+  .quick-metrics>div{min-height:58px!important;padding:7px 8px!important;border-radius:9px!important}
+  .quick-metrics span{font-size:15px!important}
+  .quick-metrics b{font-size:15px!important}
+  .quick-metrics small{font-size:8px!important}
+  .mini-donut{width:36px!important;height:36px!important;border-width:4px!important;font-size:9px!important}
+
+  .profile-compact-top{gap:8px!important;margin-bottom:7px!important}
+  .default-avatar{width:45px!important;height:45px!important;font-size:19px!important;border-width:3px!important}
+  .profile-compact-top strong{font-size:13px!important}
+  .profile-compact-top span{font-size:9px!important}
+  .profile-compact .google-btn{padding:6px 8px!important}
+  .ai-label{margin-top:6px!important;font-size:9px!important}
+
+  .my-courses-section,.catalog-section{margin-top:11px!important}
+  .section-head,.catalog-header{margin-bottom:7px!important}
+  .section-head h2,.catalog-header h2{font-size:19px!important}
+  .section-head span,.section-head>a{font-size:9px!important}
+
+  .my-courses-grid{gap:9px!important}
+  .my-course{grid-template-columns:96px minmax(0,1fr)!important;min-height:112px!important;border-radius:10px!important}
+  .my-course>div{padding:8px!important}
+  .my-course span{font-size:8px!important}
+  .my-course h3{font-size:12px!important;line-height:1.22!important;margin:2px 0 5px!important}
+  .progress-line{height:4px!important;margin-bottom:3px!important}
+  .my-course small{font-size:7px!important}
+  .my-course a{margin-top:5px!important;padding:5px 8px!important;font-size:9px!important}
+
+  .catalog-header{padding-top:0!important}
+  .catalog-tools{margin-bottom:8px!important}
+  .filter-chips,.level-row{gap:5px!important}
+  .filter-chips button,.level-row button{padding:5px 9px!important;font-size:9px!important;border-radius:6px!important}
+  .course-count strong{font-size:10px!important}
+  .course-count select{padding:5px 8px!important;font-size:10px!important}
+
+  .all-course-grid{gap:9px!important}
+  .course-card{border-radius:10px!important}
+  .course-img{height:118px!important}
+  .course-body{padding:8px!important}
+  .tag,.level{font-size:7px!important;padding:3px 5px!important}
+  .course-card h3{font-size:12px!important;line-height:1.32!important;min-height:32px!important;margin:5px 0!important}
+  .course-meta{font-size:7px!important;gap:6px!important}
+}
+
+@media (min-width:1450px){
+  .student-shell{grid-template-columns:minmax(0,1fr) 190px!important}
+  .compact-dashboard{grid-template-columns:230px minmax(0,1fr) 215px!important}
+  .all-course-grid,.my-courses-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
