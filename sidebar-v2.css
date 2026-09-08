@@ -1,0 +1,33 @@
+/* Trade2 sidebar v2 — reference layout */
+.sidebar{background:linear-gradient(180deg,#178be6 0%,#19a9e8 58%,#1cb9dc 100%)!important;border-right:0!important;box-shadow:none!important}
+.sidebar:before{display:none!important}
+.sidebar-brand{height:58px!important;min-height:58px!important;background:transparent!important;border-bottom:0!important;justify-content:center!important;padding:10px 12px!important}
+.sidebar-brand .brand-mark{display:none!important}
+.sidebar-brand .brand-copy{align-items:center!important;text-align:center!important}
+.sidebar-brand .brand-copy h1{font-size:23px!important;font-weight:900!important;letter-spacing:-.02em!important;color:#fff!important}
+.sidebar-brand .brand-copy p{display:none!important}
+.sidebar-scroll{padding:6px 8px 8px!important;overflow-y:auto!important;scrollbar-width:none!important}
+.sidebar-scroll::-webkit-scrollbar{display:none!important}
+.nav-group{border-bottom:1px solid rgba(255,255,255,.22)!important;margin:0!important;padding:0 0 10px!important}
+.nav-group+.nav-group{margin-top:8px!important}
+.nav-group-title{display:none!important}
+.sidebar-nav{gap:2px!important}
+.sidebar-link{height:42px!important;min-height:42px!important;padding:0 13px!important;border:0!important;border-radius:8px!important;background:transparent!important;box-shadow:none!important;color:#fff!important;justify-content:space-between!important}
+.sidebar-link:hover{background:rgba(0,62,145,.12)!important;border:0!important}
+.sidebar-link.active{background:rgba(31,97,222,.46)!important;box-shadow:none!important;border:0!important}
+.sidebar-label{font-size:14px!important;font-weight:800!important;letter-spacing:0!important}
+.sidebar-icon{width:18px!important;height:18px!important;opacity:1!important}
+.sidebar-icon svg{width:16px!important;height:16px!important}
+.nav-glyph{width:18px;min-width:18px;text-align:center;font-size:13px;line-height:1;color:#fff;font-weight:900;opacity:.96}
+.sidebar-promo{margin:12px 8px 16px!important;min-height:150px!important;border:0!important;border-radius:15px!important;padding:18px 14px 14px!important;background:#075783!important;box-shadow:none!important;color:#fff!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:flex-start!important}
+.sidebar-promo:before{display:none!important}
+.sidebar-promo .promo-icon{width:34px!important;height:34px!important;margin:0 auto 5px!important;filter:none!important;color:#ffd85b!important}
+.sidebar-promo .promo-icon:before{content:'♛';font-size:28px;line-height:34px}
+.sidebar-promo .promo-icon svg{display:none!important}
+.sidebar-promo h3{font-size:14px!important;margin:0 0 5px!important}
+.sidebar-promo p{font-size:10px!important;line-height:1.4!important;margin:0!important;color:#e6f4ff!important}
+.sidebar-promo .promo-mountains{display:none!important}
+.sidebar-promo .pro-btn{margin-top:12px;width:100%;height:34px;border:0;border-radius:8px;background:#1689f5;color:#fff;font-weight:800;font-size:12px;cursor:pointer}
+.version-badge{position:fixed;left:258px;bottom:10px;z-index:90;padding:4px 8px;border-radius:999px;background:rgba(8,32,62,.82);border:1px solid rgba(110,170,255,.22);color:#a9c8ed;font-size:10px;font-weight:700;letter-spacing:.03em;backdrop-filter:blur(8px)}
+@media(max-width:980px) and (min-width:681px){.version-badge{left:102px}}
+@media(max-width:680px){.version-badge{left:10px;bottom:10px;font-size:9px}.sidebar{background:linear-gradient(180deg,#178be6 0%,#19a9e8 58%,#1cb9dc 100%)!important}.sidebar-brand{justify-content:center!important}.sidebar-brand .brand-copy{display:block!important}.sidebar-brand .brand-copy h1{font-size:22px!important}.sidebar-scroll{padding:8px!important}.sidebar-scroll .sidebar-link{height:44px!important;min-height:44px!important;border-radius:8px!important;background:transparent!important;border:0!important}.sidebar-scroll .sidebar-link.active{background:rgba(31,97,222,.46)!important}.sidebar-promo{display:flex!important;min-height:145px!important;margin:10px 8px 16px!important}}
