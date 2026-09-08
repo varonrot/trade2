@@ -1,0 +1,60 @@
+/* Sidebar button separation refinements */
+@media (min-width:681px){
+  .sidebar-nav{
+    gap:10px;
+  }
+
+  .sidebar-link{
+    min-height:56px;
+    border:1px solid rgba(255,255,255,.065);
+    background:rgba(255,255,255,.025);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.018);
+  }
+
+  .sidebar-link:hover{
+    background:rgba(255,255,255,.065);
+    border-color:rgba(255,255,255,.12);
+  }
+
+  .sidebar-link.active{
+    border-color:rgba(124,181,255,.30);
+    background:linear-gradient(90deg,#2393ff 0%,#4c4cff 100%);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.20),0 14px 28px rgba(34,98,255,.26);
+  }
+
+  .nav-group{
+    padding-bottom:16px;
+    margin-bottom:16px;
+    border-bottom:1px solid rgba(255,255,255,.085);
+  }
+
+  .nav-group + .nav-group{
+    margin-top:0;
+  }
+
+  .nav-group:last-child{
+    padding-bottom:0;
+    margin-bottom:0;
+    border-bottom:0;
+  }
+
+  .nav-group-title{
+    margin-bottom:12px;
+  }
+}
+
+/* Keep the mobile bottom navigation clean while still separating its buttons */
+@media (max-width:680px){
+  .sidebar-scroll .sidebar-nav{
+    gap:7px;
+  }
+
+  .sidebar-scroll .sidebar-link{
+    border:1px solid rgba(255,255,255,.07);
+    background:rgba(255,255,255,.025);
+  }
+
+  .sidebar-scroll .sidebar-link.active{
+    border-color:rgba(105,168,255,.22);
+  }
+}
