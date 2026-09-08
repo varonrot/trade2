@@ -1,0 +1,74 @@
+/* Trade2 sidebar v3 — compact, clean, reference-matched */
+@media (min-width:681px){
+  .sidebar{
+    width:220px!important;
+    min-width:220px!important;
+    background:linear-gradient(180deg,#1087df 0%,#12a6e7 58%,#16b7dc 100%)!important;
+    border-right:0!important;
+    box-shadow:none!important;
+  }
+  .sidebar:before{display:none!important}
+  .sidebar-brand{
+    height:62px!important;
+    min-height:62px!important;
+    padding:0 22px!important;
+    justify-content:center!important;
+    gap:8px!important;
+    background:transparent!important;
+    border-bottom:0!important;
+  }
+  .sidebar-brand .brand-mark{display:none!important}
+  .sidebar-brand .brand-copy{display:flex!important;flex-direction:row!important;align-items:center!important;gap:7px!important}
+  .sidebar-brand .brand-copy h1{font-size:22px!important;font-weight:900!important;line-height:1!important;margin:0!important;color:#fff!important}
+  .sidebar-brand .brand-copy h1:after{content:"";display:inline-block;width:32px;height:22px;margin-right:8px;vertical-align:-3px;background:linear-gradient(90deg,rgba(255,255,255,.26) 0 12%,transparent 12% 20%,rgba(255,255,255,.38) 20% 38%,transparent 38% 46%,rgba(255,255,255,.5) 46% 65%,transparent 65% 73%,rgba(255,255,255,.68) 73% 100%);border-radius:2px}
+  .sidebar-brand .brand-copy p{display:none!important}
+
+  .sidebar-scroll{padding:0 8px 12px!important;overflow-y:auto!important}
+  .nav-group{margin:0!important;padding:0!important;border:0!important}
+  .nav-group-title{display:none!important}
+  .nav-group+.nav-group{margin-top:10px!important;padding-top:10px!important;border-top:1px solid rgba(255,255,255,.25)!important}
+  .sidebar-nav{gap:2px!important}
+  .sidebar-link{
+    height:42px!important;
+    min-height:42px!important;
+    padding:0 16px!important;
+    border:0!important;
+    border-radius:9px!important;
+    background:transparent!important;
+    box-shadow:none!important;
+    color:#fff!important;
+    opacity:.98;
+  }
+  .sidebar-link:hover{background:rgba(255,255,255,.08)!important}
+  .sidebar-link.active{background:#1686f7!important;box-shadow:none!important}
+  .sidebar-label{font-size:14px!important;font-weight:800!important}
+  .sidebar-icon{width:18px!important;height:18px!important}
+  .sidebar-icon svg{width:15px!important;height:15px!important}
+
+  .sidebar-promo{
+    min-height:152px!important;
+    margin:12px 8px 12px!important;
+    padding:18px 14px 14px!important;
+    border-radius:14px!important;
+    border:0!important;
+    background:#0b567f!important;
+    box-shadow:none!important;
+  }
+  .sidebar-promo:before{display:none!important}
+  .sidebar-promo .promo-icon{width:34px!important;height:34px!important;margin:0 auto 6px!important;color:#ffc82f!important;filter:none!important}
+  .sidebar-promo .promo-icon svg{display:none!important}
+  .sidebar-promo .promo-icon:before{content:"♛";font-size:31px;line-height:1}
+  .sidebar-promo h3{font-size:15px!important;margin:0 0 5px!important;color:#fff!important}
+  .sidebar-promo p{font-size:10px!important;color:#d7f0ff!important;margin:0 0 12px!important}
+  .sidebar-promo:after{content:"שדרג עכשיו";display:flex;align-items:center;justify-content:center;height:34px;border-radius:7px;background:#1686f7;color:#fff;font-size:12px;font-weight:900}
+  .promo-mountains{display:none!important}
+}
+
+/* labels / visual grouping created by sidebar-v3.js */
+.sidebar .trade2-side-divider{height:1px;background:rgba(255,255,255,.26);margin:8px 0}
+.sidebar .trade2-version{font-size:10px;color:rgba(255,255,255,.72);text-align:center;margin-top:4px}
+
+@media(max-width:680px){
+  .sidebar-brand .brand-copy h1{font-size:20px!important}
+  .sidebar-brand .brand-copy h1:after{content:"";display:inline-block;width:28px;height:18px;margin-right:7px;vertical-align:-2px;background:linear-gradient(90deg,rgba(255,255,255,.26) 0 12%,transparent 12% 20%,rgba(255,255,255,.38) 20% 38%,transparent 38% 46%,rgba(255,255,255,.5) 46% 65%,transparent 65% 73%,rgba(255,255,255,.68) 73% 100%);border-radius:2px}
+}
