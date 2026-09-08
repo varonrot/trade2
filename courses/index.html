@@ -21,20 +21,21 @@
       <a href="#all-courses"><span>▤</span>כל הקורסים</a>
       <a href="/learning-paths/beginner/"><span>◇</span>מסלולי לימוד</a>
       <div class="sep"></div>
-      <a href="#all-courses"><span>↗</span>אופציות</a>
-      <a href="#all-courses"><span>▥</span>מסחר יומי</a>
-      <a href="#all-courses"><span>⌘</span>אלגו טריידינג</a>
-      <a href="#all-courses"><span>▧</span>חוזים עתידיים</a>
-      <a href="#all-courses"><span>◒</span>השקעות</a>
+      <a href="#all-courses" data-side-category="אופציות"><span>↗</span>אופציות</a>
+      <a href="#all-courses" data-side-category="מסחר יומי"><span>▥</span>מסחר יומי</a>
+      <a href="#all-courses" data-side-category="אלגו טריידינג"><span>⌘</span>אלגו טריידינג</a>
+      <a href="#all-courses" data-side-category="חוזים עתידיים"><span>▧</span>חוזים עתידיים</a>
+      <a href="#all-courses" data-side-category="השקעות"><span>◒</span>השקעות</a>
       <div class="sep"></div>
-      <a href="#"><span>♡</span>מועדפים</a>
+      <a href="#my-courses"><span>♡</span>מועדפים</a>
       <a href="#dashboard"><span>▥</span>התקדמות שלי</a>
       <a href="#"><span>⚙</span>הגדרות</a>
     </nav>
     <div class="side-ai">
-      <div class="robot">◉</div>
-      <strong>משולב בינה מלאכותית</strong>
-      <small>לומדים חכם יותר</small>
+      <div class="crown">♛</div>
+      <strong>Trade2 Pro</strong>
+      <small>גישה לכל הקורסים והתוכן המתקדם</small>
+      <a href="#">שדרג עכשיו</a>
     </div>
   </aside>
 
@@ -44,75 +45,81 @@
         <img src="https://i.pravatar.cc/80?img=12" alt="תלמיד">
         <div><strong>שלום, תלמיד</strong><small>מרכז הלמידה שלך</small></div>
       </div>
-      <div class="top-search"><span>⌕</span><input type="search" placeholder="חיפוש קורסים, שיעורים, נושאים..."></div>
+      <div class="top-search"><span>⌕</span><input id="courseSearch" type="search" placeholder="חפש קורסים, שיעורים ותכנים..."></div>
       <div class="top-actions"><button>♧<span class="badge">1</span></button><button>✉</button><button id="themeToggle">☾</button></div>
     </header>
 
     <main>
-      <section class="dashboard" id="dashboard">
-        <article class="panel progress-card">
-          <div class="panel-title"><strong>התקדמות כללית</strong><span>המסע שלך להצלחה במסחר</span></div>
-          <div class="progress-wrap">
-            <div class="big-donut"><div class="donut-center"><b>68%</b><small>הושלם</small></div></div>
-            <div class="legend">
-              <p><i class="c1"></i><span>שיעורים שנצפו</span><b>18/26</b></p>
-              <p><i class="c2"></i><span>קורסים שהושלמו</span><b>2/6</b></p>
-              <p><i class="c3"></i><span>מסלולי לימוד</span><b>1/3</b></p>
-              <p><i class="c4"></i><span>מבחנים</span><b>3/8</b></p>
-            </div>
+      <section class="dashboard-top" id="dashboard">
+        <article class="dash-card progress-overall">
+          <div class="card-heading"><h3>ההתקדמות הכללית שלי</h3><span>המסע שלך להצלחה במסחר</span></div>
+          <div class="overall-body">
+            <div class="big-ring"><div><b>68%</b><small>הושלם</small></div></div>
+            <ul><li><i class="l1"></i>קורסים פעילים <b>12</b></li><li><i class="l2"></i>שיעורים שנצפו <b>86</b></li><li><i class="l3"></i>זמן למידה <b>42 שעות</b></li></ul>
           </div>
-          <a class="full-btn" href="#my-courses">המשך ללמוד ←</a>
+          <p class="motivation">״עוד קצת ואתה שם״ 🚀</p>
         </article>
 
-        <div class="center-dashboard">
-          <div class="stat-row">
-            <article class="panel stat-card"><span class="stat-icon">◷</span><strong>14ש׳ 21ד׳</strong><small>זמן לימוד כולל</small><em>▲ 24% מהחודש הקודם</em></article>
-            <article class="panel stat-card"><span class="stat-icon">▶</span><strong>18</strong><small>שיעורים שנצפו</small><em>▲ 12% השבוע</em></article>
-            <article class="panel stat-card"><span class="stat-icon">▤</span><strong>82</strong><small>קורסים זמינים</small><em>+6 קורסים חדשים</em></article>
-          </div>
-          <div class="chart-row">
-            <article class="panel activity-card"><div class="panel-title"><strong>פעילות לימוד — 7 הימים האחרונים</strong></div><div class="bar-chart"><i style="height:42%"></i><i style="height:29%"></i><i style="height:25%"></i><i style="height:47%"></i><i style="height:56%"></i><i style="height:76%"></i><i style="height:43%"></i></div><div class="days"><span>א׳</span><span>ב׳</span><span>ג׳</span><span>ד׳</span><span>ה׳</span><span>ו׳</span><span>ש׳</span></div></article>
-            <article class="panel topics-card"><div class="panel-title"><strong>התפלגות לפי נושאים</strong></div><div class="topic-body"><div class="topic-donut"></div><div class="topic-legend"><p><i class="t1"></i>אופציות <b>38%</b></p><p><i class="t2"></i>מסחר יומי <b>22%</b></p><p><i class="t3"></i>חוזים עתידיים <b>15%</b></p><p><i class="t4"></i>אלגו טריידינג <b>15%</b></p><p><i class="t5"></i>אסטרטגיות <b>10%</b></p></div></div></article>
-          </div>
-        </div>
+        <article class="dash-card weekly-activity">
+          <div class="card-heading"><h3>הפעילות השבועית שלי</h3><span>שעות לימוד</span></div>
+          <div class="week-bars" id="aiBars"><i style="height:32%"></i><i style="height:48%"></i><i style="height:25%"></i><i style="height:62%"></i><i style="height:44%"></i><i style="height:72%"></i><i style="height:40%"></i></div>
+          <div class="days"><span>א׳</span><span>ב׳</span><span>ג׳</span><span>ד׳</span><span>ה׳</span><span>ו׳</span><span>ש׳</span></div>
+          <strong class="week-up">↑ 18% בהשוואה לשבוע שעבר</strong>
+        </article>
 
-        <article class="panel profile-card">
-          <div class="panel-title"><strong>הפרופיל שלי</strong></div>
-          <img src="https://i.pravatar.cc/160?img=12" alt="תלמיד">
-          <h3>לומד אורח</h3>
-          <span class="verified">● תלמיד פעיל</span>
-          <div class="profile-lines"><p><span>ג׳וינ Trade2</span><b>2024</b></p><p><span>רמת מסחר</span><b>מתקדם</b></p><p><span>מסלול נוכחי</span><b>אופציות</b></p></div>
-          <div class="quote">״משמעת היום, חופש כלכלי מחר.״</div>
+        <article class="dash-card next-lesson">
+          <div class="card-heading"><h3>השיעור הבא שלך</h3><span>מסחר יומי</span></div>
+          <div class="lesson-thumb"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><span class="play">▶</span></div>
+          <h4>ניהול סיכונים במסחר יומי</h4>
+          <small>Day Trading Masterclass · שיעור 4 מתוך 12</small>
+          <a href="#my-courses">המשך ללמוד ▶</a>
+        </article>
+
+        <article class="dash-card watched-card compact-kpi">
+          <div class="round-icon">▣</div><b>86</b><span>שיעורים שנצפו</span><small>מתוך 240 שיעורים</small><div class="mini-progress"><i style="width:36%"></i></div>
+        </article>
+
+        <article class="dash-card time-card compact-kpi">
+          <div class="round-icon">◷</div><b>42</b><span>שעות לימוד</span><small class="positive">↑ 18% מהחודש שעבר</small>
+        </article>
+
+        <article class="dash-card welcome-card">
+          <div class="welcome-profile"><img src="https://i.pravatar.cc/120?img=12" alt=""><div><h3>ברוך הבא חזרה!</h3><strong>תלמיד Trade2</strong></div></div>
+          <p>המשך ללמוד, להתאמן ולפתח את עצמך כסוחר טוב יותר.</p>
+          <div class="welcome-actions"><span>🏆 הישגים</span><span>▥ התקדמות</span><span>◎ יעדים</span><span>▣ קורסים</span></div>
         </article>
       </section>
 
       <section class="my-courses" id="my-courses">
-        <div class="section-head"><a href="#all-courses">צפייה בכל הקורסים שלי ←</a><div><span>המשך בדיוק מהמקום בו הפסקת</span><h2>הקורסים שלי</h2></div></div>
-        <div class="my-grid">
-          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/49-1.png" alt=""><div class="my-info"><span>אופציות</span><h3>קורס מסחר באופציות: רמה 1</h3><div class="progress"><i style="width:70%"></i></div><div class="progress-meta"><b>70%</b><small>14/20 שיעורים הושלמו</small></div><a href="/courses/option1/">המשך ללמוד ▶</a></div></article>
-          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div class="my-info"><span>מסחר יומי</span><h3>Day Trading Masterclass</h3><div class="progress"><i style="width:45%"></i></div><div class="progress-meta"><b>45%</b><small>9/20 שיעורים הושלמו</small></div><a href="#">המשך ללמוד ▶</a></div></article>
-          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/46-2.png" alt=""><div class="my-info"><span>חוזים עתידיים</span><h3>Futures Trading</h3><div class="progress"><i style="width:20%"></i></div><div class="progress-meta"><b>20%</b><small>4/20 שיעורים הושלמו</small></div><a href="#">המשך ללמוד ▶</a></div></article>
-          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/42-1.png" alt=""><div class="my-info"><span>אלגו טריידינג</span><h3>Algorithmic Trading</h3><div class="progress"><i style="width:85%"></i></div><div class="progress-meta"><b>85%</b><small>17/20 שיעורים הושלמו</small></div><a href="#">המשך ללמוד ▶</a></div></article>
+        <div class="section-head"><a href="#all-courses">צפייה בכל הקורסים שלי ←</a><div><span>המשך את מסע הלמידה שלך</span><h2>הקורסים שלי</h2></div></div>
+        <div class="my-grid six-my">
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/49-1.png" alt=""><div class="my-info"><span>אופציות</span><h3>Options Trading for Beginners</h3><div class="progress"><i style="width:75%"></i></div><div class="progress-meta"><b>75%</b><small>16 מתוך 21 שיעורים</small></div><a href="/courses/option1/">המשך ללמוד ▶</a></div></article>
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div class="my-info"><span>מסחר יומי</span><h3>Day Trading Masterclass</h3><div class="progress"><i style="width:40%"></i></div><div class="progress-meta"><b>40%</b><small>20 מתוך 50 שיעורים</small></div><a href="#">המשך ללמוד ▶</a></div></article>
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/42-1.png" alt=""><div class="my-info"><span>אלגו טריידינג</span><h3>Algorithmic Trading</h3><div class="progress"><i style="width:22%"></i></div><div class="progress-meta"><b>22%</b><small>14 מתוך 63 שיעורים</small></div><a href="#">המשך ללמוד ▶</a></div></article>
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/46-2.png" alt=""><div class="my-info"><span>חוזים עתידיים</span><h3>Futures Trading</h3><div class="progress"><i style="width:15%"></i></div><div class="progress-meta"><b>15%</b><small>10 מתוך 68 שיעורים</small></div><a href="#">המשך ללמוד ▶</a></div></article>
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/42-1.png" alt=""><div class="my-info"><span>ניתוח טכני</span><h3>Technical Analysis Pro</h3><div class="progress"><i style="width:60%"></i></div><div class="progress-meta"><b>60%</b><small>28 מתוך 46 שיעורים</small></div><a href="#">המשך ללמוד ▶</a></div></article>
+          <article class="my-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div class="my-info"><span>מסחר סווינג</span><h3>Swing Trading Essentials</h3><div class="progress"><i style="width:48%"></i></div><div class="progress-meta"><b>48%</b><small>12 מתוך 25 שיעורים</small></div><a href="#">המשך ללמוד ▶</a></div></article>
         </div>
       </section>
 
       <section class="all-courses" id="all-courses">
-        <div class="section-head"><a href="#">צפייה בכל הקורסים ←</a><div><span>בחר קורס חדש והתקדם בקצב שלך</span><h2>כל הקורסים</h2></div></div>
-        <div class="courses-grid six-grid">
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/49-1.png" alt=""><div class="course-info"><span class="pill beginner">מתחילים</span><h3>Options Trading for Beginners</h3><p>יסודות המסחר באופציות בצורה פשוטה וברורה.</p><small>24 שיעורים · ★ 4.8</small><a href="/courses/option1/">התחל קורס</a></div></article>
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/42-1.png" alt=""><div class="course-info"><span class="pill strategy">אסטרטגיות</span><h3>אסטרטגיה באופציות במהלך דוחות כספיים</h3><p>אסטרטגיות מתקדמות לתקופות דוחות.</p><small>18 שיעורים · ★ 4.9</small><a href="#">התחל קורס</a></div></article>
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div class="course-info"><span class="pill day">מסחר יומי</span><h3>Day Trading Masterclass</h3><p>אסטרטגיות מתקדמות למסחר יומי בשוק ההון.</p><small>18 שיעורים · ★ 4.7</small><a href="#">התחל קורס</a></div></article>
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/46-2.png" alt=""><div class="course-info"><span class="pill algo">אלגו טריידינג</span><h3>Algorithmic Trading</h3><p>בניית מערכות מסחר אוטומטיות והטמעתן.</p><small>32 שיעורים · ★ 4.8</small><a href="#">התחל קורס</a></div></article>
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/46-2.png" alt=""><div class="course-info"><span class="pill futures">חוזים עתידיים</span><h3>Futures Trading</h3><p>מסחר מקצועי בחוזים עתידיים בשווקים מרכזיים.</p><small>20 שיעורים · ★ 4.6</small><a href="#">התחל קורס</a></div></article>
-          <article class="course-card"><img src="https://trade2.co.il/wp-content/uploads/2024/10/7-2.png" alt=""><div class="course-info"><span class="pill technical">ניתוח טכני</span><h3>Price Action & Technical Analysis</h3><p>גרפים, Price Action וזיהוי תנועות שוק.</p><small>26 שיעורים · ★ 4.7</small><a href="#">התחל קורס</a></div></article>
+        <div class="section-head"><a href="#">צפייה בכל הקורסים ←</a><div><span>כל הקורסים של Trade2 במקום אחד</span><h2>כל הקורסים</h2></div></div>
+        <div class="catalog-tools">
+          <div class="filter-chips">
+            <button class="active" data-category="הכל">הכל</button><button data-category="אופציות">אופציות</button><button data-category="מסחר יומי">מסחר יומי</button><button data-category="אלגו טריידינג">אלגו טריידינג</button><button data-category="חוזים עתידיים">חוזים עתידיים</button><button data-category="השקעות">השקעות</button><button data-category="מתחילים">מתחילים</button><button data-category="אסטרטגיות">אסטרטגיות</button>
+          </div>
+          <div class="course-controls"><strong id="resultCount">82 קורסים</strong><select id="sortCourses"><option value="default">מיון ברירת מחדל</option><option value="title">שם הקורס</option><option value="students">הכי נלמד</option><option value="views">הכי נצפה</option></select></div>
         </div>
+        <div class="level-row"><button class="active" data-level="הכל">כל הרמות</button><button data-level="מתחילים">מתחילים</button><button data-level="ביניים">ביניים</button><button data-level="מתקדמים">מתקדמים</button></div>
+        <div id="allCoursesGrid" class="all-course-grid"></div>
       </section>
     </main>
   </div>
 </div>
+
+<script src="data-1.js"></script><script src="data-2.js"></script><script src="data-3.js"></script><script src="data-4.js"></script><script src="data-5.js"></script><script src="courses.js"></script>
 <script>
-const themeToggle=document.getElementById('themeToggle');
-themeToggle?.addEventListener('click',()=>{document.body.classList.toggle('light');themeToggle.textContent=document.body.classList.contains('light')?'☀':'☾';});
+const tt=document.getElementById('themeToggle');tt?.addEventListener('click',()=>{document.body.classList.toggle('light');tt.textContent=document.body.classList.contains('light')?'☀':'☾'});
 </script>
 </body>
 </html>
