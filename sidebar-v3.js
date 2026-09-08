@@ -1,6 +1,7 @@
 document.addEventListener('DOMContentLoaded',()=>{
   const side=document.querySelector('.sidebar');
   if(!side)return;
+  const here=location.pathname;
   side.innerHTML=`
     <div class="sidebar-brand">
       <div class="brand-copy"><h1>Trade2</h1><p></p></div>
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     <div class="sidebar-scroll">
       <div class="nav-group">
         <nav class="sidebar-nav">
-          <a class="sidebar-link active" href="/"><span class="sidebar-label">דשבורד</span><span class="sidebar-icon">⌂</span></a>
+          <a class="sidebar-link ${here.includes('dashboard.html')?'active':''}" href="/dashboard.html"><span class="sidebar-label">דשבורד</span><span class="sidebar-icon">⌂</span></a>
           <a class="sidebar-link" href="/courses/"><span class="sidebar-label">הקורסים שלי</span><span class="sidebar-icon">▣</span></a>
           <a class="sidebar-link" href="/courses/"><span class="sidebar-label">המשך ללמוד</span><span class="sidebar-icon">▶</span></a>
           <a class="sidebar-link" href="/courses/"><span class="sidebar-label">כל הקורסים</span><span class="sidebar-icon">▤</span></a>
@@ -38,5 +39,5 @@ document.addEventListener('DOMContentLoaded',()=>{
       <h3>Trade2 Pro</h3>
       <p>גישה לכל הקורסים והתוכן המתקדם</p>
     </div>
-    <div class="trade2-version">v0.1.3</div>`;
+    <div class="trade2-version">v0.1.4</div>`;
 });
