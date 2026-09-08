@@ -97,6 +97,44 @@
     font-size:11px;
     margin-top:3px;
   }
+
+  /* Desktop topbar layout: student on right, search centered, tools on left */
+  .topbar{
+    position:relative;
+    justify-content:flex-start;
+  }
+
+  .topbar-right{
+    position:absolute;
+    left:50%;
+    top:50%;
+    transform:translate(-50%,-50%);
+    width:min(440px,38vw);
+    z-index:2;
+  }
+
+  .topbar-right .searchbar{
+    width:100%;
+  }
+
+  .topbar-left{
+    width:100%;
+    justify-content:flex-start;
+    padding-right:0;
+    position:relative;
+  }
+
+  .topbar-left .profile-chip{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform:translateY(-50%);
+  }
+
+  .topbar-left .topbar-divider{
+    margin-left:8px;
+    margin-right:4px;
+  }
 }
 
 @media (min-width:681px) and (max-height:800px){
