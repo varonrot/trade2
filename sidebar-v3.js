@@ -38,5 +38,5 @@ document.addEventListener('DOMContentLoaded',()=>{
       <h3>Trade2 Pro</h3>
       <p>גישה לכל הקורסים והתוכן המתקדם</p>
     </div>
-    <div class="trade2-version">v0.1.1</div>`;
+    <div class="trade2-version">v0.1.3</div>`;
 });
