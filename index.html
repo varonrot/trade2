@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="sidebar-separators.css" />
   <link rel="stylesheet" href="mobile-hamburger.css" />
   <link rel="stylesheet" href="theme.css" />
+  <link rel="stylesheet" href="sidebar-v3.css" />
 </head>
 <body>
   <svg width="0" height="0" style="position:absolute;opacity:0;pointer-events:none">
@@ -32,23 +33,13 @@
   </svg>
 
   <div class="dashboard-shell">
-    <aside class="sidebar">
-      <div class="sidebar-brand">
-        <div class="brand-copy"><h1>מסלול שלי</h1><p>לומדים היום, מצליחים מחר</p></div>
-        <div class="brand-mark" aria-hidden="true"><svg><use href="#i-cap"></use></svg></div>
-      </div>
-      <div class="sidebar-scroll">
-        <div class="nav-group"><p class="nav-group-title">ראשי</p><nav class="sidebar-nav"><a class="sidebar-link active" href="/"><span class="sidebar-label">בית</span><span class="sidebar-icon"><svg><use href="#i-home"></use></svg></span></a><a class="sidebar-link" href="/courses/"><span class="sidebar-label">הקורסים שלי</span><span class="sidebar-icon"><svg><use href="#i-book"></use></svg></span></a><a class="sidebar-link" href="/courses/"><span class="sidebar-label">דשבורד</span><span class="sidebar-icon"><svg><use href="#i-grid"></use></svg></span></a><a class="sidebar-link" href="#"><span class="sidebar-label">לוח שיעורים</span><span class="sidebar-icon"><svg><use href="#i-calendar"></use></svg></span></a></nav></div>
-        <div class="nav-group"><p class="nav-group-title">התקדמות</p><nav class="sidebar-nav"><a class="sidebar-link" href="#"><span class="sidebar-label">דוחות התקדמות</span><span class="sidebar-icon"><svg><use href="#i-bars"></use></svg></span></a><a class="sidebar-link" href="#"><span class="sidebar-label">הישגים ותעודות</span><span class="sidebar-icon"><svg><use href="#i-trophy"></use></svg></span></a><a class="sidebar-link" href="#"><span class="sidebar-label">קהילה</span><span class="sidebar-icon"><svg><use href="#i-users"></use></svg></span></a></nav></div>
-        <div class="nav-group"><p class="nav-group-title">כלים נוספים</p><nav class="sidebar-nav"><a class="sidebar-link" href="#"><span class="sidebar-label">הגדרות</span><span class="sidebar-icon"><svg><use href="#i-settings"></use></svg></span></a><a class="sidebar-link" href="#"><span class="sidebar-label">עזרה</span><span class="sidebar-icon"><svg><use href="#i-help"></use></svg></span></a></nav></div>
-      </div>
-      <div class="sidebar-promo"><div class="promo-icon"><svg><use href="#i-book"></use></svg></div><h3>למידה ללא גבולות</h3><p>הידע שלך מתחיל כאן</p><div class="promo-mountains" aria-hidden="true"><span></span><span></span><span></span></div></div>
-    </aside>
+    <aside class="sidebar"></aside>
     <section class="main-panel">
       <header class="topbar"><div class="topbar-right"><label class="searchbar"><span class="search-icon"><svg><use href="#i-search"></use></svg></span><input type="text" placeholder="חיפוש קורסים, שיעורים או נושאים..." /></label></div><div class="topbar-left"><button class="topbar-icon" aria-label="מצב לילה" title="מעבר למצב בהיר"><svg><use href="#i-moon"></use></svg></button><button class="topbar-icon has-dot" aria-label="התראות"><svg><use href="#i-bell"></use></svg></button><div class="topbar-divider"></div><div class="profile-chip"><div class="profile-text"><strong>דניאל כהן</strong><span>תלמיד/ה</span></div><div class="avatar">ד</div><button class="caret-btn" aria-label="פתיחת תפריט"><svg><use href="#i-chevron"></use></svg></button></div></div></header>
       <main class="dashboard-canvas" aria-label="אזור תוכן ריק"></main>
     </section>
   </div>
+  <script src="sidebar-v3.js"></script>
   <script src="mobile-menu.js"></script>
   <script src="theme-toggle.js"></script>
 </body>
