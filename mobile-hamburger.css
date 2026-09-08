@@ -1,19 +1,24 @@
 @media(max-width:680px){
-  html,body{overflow:hidden!important}
+  html,body{overflow:hidden!important;background:#020d1d!important}
   .dashboard-shell{display:block!important;min-height:100vh;width:100%;direction:rtl}
-  .sidebar{position:fixed!important;top:0;right:0;left:auto;bottom:0;width:min(86vw,330px)!important;min-width:0!important;height:100vh!important;display:flex!important;flex-direction:column!important;z-index:1000!important;transform:translateX(105%);transition:transform .28s ease;background:linear-gradient(180deg,#062452 0%,#165db8 100%)!important;box-shadow:-18px 0 40px rgba(0,0,0,.35);overflow:hidden!important}
+
+  .mobile-hamburger{position:fixed;top:10px;right:12px;width:42px;height:42px;border:0;border-radius:12px;background:linear-gradient(180deg,#1bd0ff 0%,#2e89ff 100%);box-shadow:0 10px 24px rgba(12,84,198,.28);z-index:1300;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:0;cursor:pointer}
+  .mobile-hamburger span{display:block;width:20px;height:2px;border-radius:2px;background:#fff;transition:transform .2s ease,opacity .2s ease}
+  body.mobile-menu-open .mobile-hamburger span:nth-child(1){transform:translateY(6px) rotate(45deg)}
+  body.mobile-menu-open .mobile-hamburger span:nth-child(2){opacity:0}
+  body.mobile-menu-open .mobile-hamburger span:nth-child(3){transform:translateY(-6px) rotate(-45deg)}
+
+  .sidebar{position:fixed!important;top:0;right:0;left:auto;bottom:0;width:min(86vw,330px)!important;min-width:0!important;height:100vh!important;display:flex!important;flex-direction:column!important;z-index:1200!important;transform:translateX(105%);transition:transform .28s ease;background:linear-gradient(180deg,#062452 0%,#165db8 100%)!important;box-shadow:-18px 0 40px rgba(0,0,0,.35);overflow:hidden!important}
   body.mobile-menu-open .sidebar{transform:translateX(0)}
-  body.mobile-menu-open:before{content:"";position:fixed;inset:0;background:rgba(0,7,18,.62);backdrop-filter:blur(2px);z-index:999}
-  .sidebar-brand{height:70px!important;padding:10px 14px!important;justify-content:space-between!important;flex:0 0 70px;background:linear-gradient(180deg,#062044 0%,#04172f 100%)!important}
-  .brand-copy{display:block!important;text-align:right!important;order:1}
+  body.mobile-menu-open:before{content:"";position:fixed;inset:0;background:rgba(0,7,18,.62);backdrop-filter:blur(2px);z-index:1100}
+
+  .sidebar-brand{height:70px!important;padding:10px 16px!important;justify-content:flex-start!important;gap:12px!important;flex:0 0 70px;background:linear-gradient(180deg,#062044 0%,#04172f 100%)!important}
+  .brand-copy{display:block!important;text-align:right!important;order:0!important}
   .brand-copy h1{font-size:19px!important}.brand-copy p{font-size:10px!important}
-  .brand-mark{position:fixed!important;top:10px;right:12px;z-index:1200;width:42px!important;height:42px!important;border-radius:12px!important;display:grid!important;place-items:center!important;cursor:pointer;transform:none!important;transition:.2s ease;background:linear-gradient(180deg,#1bd0ff 0%,#2e89ff 100%)!important}
-  .brand-mark svg{display:none!important}
-  .brand-mark:before,.brand-mark:after{content:"";position:absolute;width:20px;height:2px;background:#fff;border-radius:2px;transition:.2s ease}
-  .brand-mark:before{transform:translateY(-6px);box-shadow:0 6px 0 #fff}
-  .brand-mark:after{transform:translateY(6px)}
-  body.mobile-menu-open .brand-mark:before{box-shadow:none;transform:rotate(45deg)}
-  body.mobile-menu-open .brand-mark:after{transform:rotate(-45deg)}
+  .brand-mark{position:static!important;width:42px!important;height:42px!important;border-radius:12px!important;display:grid!important;place-items:center!important;order:1!important;cursor:default!important;background:linear-gradient(180deg,#1bd0ff 0%,#2e89ff 100%)!important}
+  .brand-mark svg{display:block!important;width:23px!important;height:23px!important}
+  .brand-mark:before,.brand-mark:after{display:none!important}
+
   .sidebar-scroll{position:static!important;left:auto!important;right:auto!important;bottom:auto!important;height:auto!important;flex:1!important;padding:12px 10px 18px!important;background:transparent!important;border:0!important;box-shadow:none!important;overflow-y:auto!important;backdrop-filter:none!important}
   .sidebar-scroll .nav-group,.sidebar-scroll .nav-group:not(:first-child){display:block!important;height:auto!important;margin:0 0 16px!important;padding:0 0 14px!important}
   .nav-group-title{display:block!important;margin:8px 8px 10px!important;font-size:11px!important}
@@ -24,9 +29,16 @@
   .sidebar-scroll .sidebar-icon{width:24px!important;height:24px!important}.sidebar-scroll .sidebar-icon svg{width:21px!important;height:21px!important}
   .sidebar-promo{display:block!important;min-height:126px!important;margin:0 10px 12px!important;flex:0 0 auto}
   .sidebar-promo h3,.sidebar-promo p{display:block!important}
+
   .main-panel{min-height:100vh!important;height:100vh!important;width:100%!important;padding-bottom:0!important}
-  .topbar{height:64px!important;min-height:64px!important;padding:10px 12px 10px 64px!important;gap:8px!important}
-  .topbar-right{flex:1!important;min-width:0!important}.searchbar{width:100%!important;min-width:0!important;height:42px!important}
-  .topbar-left{flex:0 0 auto!important;gap:3px!important}.profile-text,.topbar-divider,.caret-btn{display:none!important}.avatar{width:36px!important;height:36px!important}
+  .topbar{height:64px!important;min-height:64px!important;padding:10px 12px 10px 66px!important;gap:8px!important;direction:rtl!important}
+  .topbar-right{flex:1!important;min-width:0!important;order:1!important}.searchbar{width:100%!important;min-width:0!important;height:42px!important}
+  .topbar-left{flex:0 0 auto!important;gap:2px!important;order:2!important;direction:ltr!important}
+  .profile-text,.topbar-divider,.caret-btn{display:none!important}
+  .avatar{width:36px!important;height:36px!important}
+  .topbar-icon{width:30px!important;height:30px!important}
+  .topbar-icon svg{width:17px!important;height:17px!important}
   .dashboard-canvas{flex:1!important;min-height:0!important}.main-panel:before{inset:64px 0 0 0!important}
 }
+
+@media(min-width:681px){.mobile-hamburger{display:none!important}}
