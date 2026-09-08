@@ -1,4 +1,4 @@
-/* Compact premium student dashboard - v2 */
+/* Compact premium student dashboard - v3 */
 @media (min-width:981px){
   .student-shell{grid-template-columns:minmax(0,1fr) 180px!important}
   .student-sidebar{padding:14px 12px!important}
@@ -8,70 +8,86 @@
   .side-nav a{padding:7px 9px!important;font-size:12px!important;border-radius:7px!important}
   .side-nav a span{width:18px!important;font-size:14px!important}
   .side-sep{margin:5px 0!important}
-
   .student-topbar{height:54px!important;padding:0 16px!important}
   .top-search{height:34px!important;width:min(410px,36vw)!important}
   .guest-btn,.google-top,.google-btn{padding:6px 10px!important;font-size:11px!important}
-
   main{padding:12px 16px 28px!important}
-
-  .compact-dashboard{grid-template-columns:215px minmax(0,1fr) 205px!important;gap:10px!important;align-items:stretch!important}
-  .activity-panel,.profile-compact{padding:12px!important;min-height:152px!important}
-  .panel-mini-head strong{font-size:13px!important}
-  .panel-mini-head span{font-size:9px!important}
-  .compact-bars{height:70px!important;margin-top:7px!important}
-  .day-row{font-size:8px!important;margin-top:3px!important}
-
-  .welcome-block{padding:2px 6px!important;display:flex!important;flex-direction:column!important;justify-content:center!important}
-  .welcome-block h1{font-size:25px!important;line-height:1.08!important;margin:2px 0 4px!important}
-  .welcome-block p{font-size:11px!important;margin-bottom:9px!important}
-  .hero-kicker,.blue-kicker{font-size:10px!important}
-  .quick-metrics{grid-template-columns:repeat(5,minmax(0,1fr))!important;gap:7px!important}
-  .quick-metrics>div{min-height:58px!important;padding:7px 8px!important;border-radius:9px!important}
-  .quick-metrics span{font-size:15px!important}
-  .quick-metrics b{font-size:15px!important}
-  .quick-metrics small{font-size:8px!important}
-  .mini-donut{width:36px!important;height:36px!important;border-width:4px!important;font-size:9px!important}
-
-  .profile-compact-top{gap:8px!important;margin-bottom:7px!important}
-  .default-avatar{width:45px!important;height:45px!important;font-size:19px!important;border-width:3px!important}
-  .profile-compact-top strong{font-size:13px!important}
-  .profile-compact-top span{font-size:9px!important}
-  .profile-compact .google-btn{padding:6px 8px!important}
-  .ai-label{margin-top:6px!important;font-size:9px!important}
-
-  .my-courses-section,.catalog-section{margin-top:11px!important}
-  .section-head,.catalog-header{margin-bottom:7px!important}
-  .section-head h2,.catalog-header h2{font-size:19px!important}
-  .section-head span,.section-head>a{font-size:9px!important}
-
-  .my-courses-grid{gap:9px!important}
-  .my-course{grid-template-columns:96px minmax(0,1fr)!important;min-height:112px!important;border-radius:10px!important}
-  .my-course>div{padding:8px!important}
-  .my-course span{font-size:8px!important}
-  .my-course h3{font-size:12px!important;line-height:1.22!important;margin:2px 0 5px!important}
-  .progress-line{height:4px!important;margin-bottom:3px!important}
-  .my-course small{font-size:7px!important}
-  .my-course a{margin-top:5px!important;padding:5px 8px!important;font-size:9px!important}
-
-  .catalog-header{padding-top:0!important}
-  .catalog-tools{margin-bottom:8px!important}
-  .filter-chips,.level-row{gap:5px!important}
-  .filter-chips button,.level-row button{padding:5px 9px!important;font-size:9px!important;border-radius:6px!important}
-  .course-count strong{font-size:10px!important}
-  .course-count select{padding:5px 8px!important;font-size:10px!important}
-
-  .all-course-grid{gap:9px!important}
-  .course-card{border-radius:10px!important}
-  .course-img{height:118px!important}
-  .course-body{padding:8px!important}
-  .tag,.level{font-size:7px!important;padding:3px 5px!important}
-  .course-card h3{font-size:12px!important;line-height:1.32!important;min-height:32px!important;margin:5px 0!important}
-  .course-meta{font-size:7px!important;gap:6px!important}
 }
+
+.overview-dashboard{display:grid;grid-template-columns:minmax(0,1fr) 235px;grid-template-areas:"welcome profile" "activity metrics";gap:10px;align-items:stretch;margin-bottom:12px}
+.overview-welcome{grid-area:welcome;align-self:center;padding:4px 8px 6px}
+.overview-welcome h1{font-size:30px;line-height:1.08;margin:3px 0 4px;letter-spacing:-.025em}
+.overview-welcome p{font-size:12px;color:#8fa9bd;margin:0}
+.overview-profile{grid-area:profile;padding:11px;display:grid;grid-template-columns:58px minmax(0,1fr);gap:8px;align-items:center;min-height:112px}
+.profile-avatar-img{width:58px;height:58px;border-radius:12px;overflow:hidden;border:1px solid #285777;box-shadow:0 0 0 3px rgba(65,183,255,.08)}
+.profile-avatar-img img{width:100%;height:100%;object-fit:cover;display:block}
+.overview-profile-copy{display:flex;flex-direction:column;min-width:0}
+.overview-profile-copy .verified{font-size:8px;color:#52e7b0;margin-bottom:2px}
+.overview-profile-copy strong{font-size:14px;line-height:1.2}
+.overview-profile-copy small{font-size:8px;color:#7595ad;line-height:1.35;margin-top:2px}
+.overview-profile .google-btn{grid-column:1/-1;width:100%;margin:0!important;padding:5px 8px!important;font-size:9px!important}
+.overview-profile .ai-label{grid-column:1/-1;margin-top:0!important;font-size:8px!important}
+.overview-activity{grid-area:activity;padding:10px 12px;display:grid;grid-template-columns:170px minmax(0,1fr);grid-template-areas:"head bars" "days bars";column-gap:12px;align-items:center;min-height:92px}
+.overview-activity .panel-mini-head{grid-area:head}
+.overview-activity .panel-mini-head strong{font-size:12px!important}
+.overview-activity .panel-mini-head span{font-size:8px!important}
+.overview-activity .compact-bars{grid-area:bars;height:66px!important;margin:0!important;align-self:end}
+.overview-activity .day-row{grid-area:days;font-size:7px!important;margin:4px 0 0!important}
+.overview-metrics{grid-area:metrics;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:8px}
+.overview-metric{min-height:92px;background:#0d2033;border:1px solid #173b58;border-radius:10px;padding:8px;display:grid;grid-template-columns:auto 1fr;grid-template-areas:"icon value" "icon label";column-gap:7px;align-content:center}
+.overview-metric>span{grid-area:icon;color:#57caff;font-size:14px;align-self:center}
+.overview-metric>b{grid-area:value;font-size:14px;white-space:nowrap}
+.overview-metric>small{grid-area:label;font-size:7px;color:#7d9ab2}
+.overview-metric .mini-donut{width:34px!important;height:34px!important;border-width:4px!important;font-size:8px!important}
+
+.my-courses-section,.catalog-section{margin-top:10px!important}
+.section-head,.catalog-header{margin-bottom:7px!important}
+.section-head h2,.catalog-header h2{font-size:19px!important}
+.section-head span,.section-head>a{font-size:9px!important}
+.my-courses-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px!important}
+.my-course{grid-template-columns:96px minmax(0,1fr)!important;min-height:112px!important;border-radius:10px!important}
+.my-course>div{padding:8px!important}
+.my-course span{font-size:8px!important}
+.my-course h3{font-size:12px!important;line-height:1.22!important;margin:2px 0 5px!important}
+.progress-line{height:4px!important;margin-bottom:3px!important}
+.my-course small{font-size:7px!important}
+.my-course a{margin-top:5px!important;padding:5px 8px!important;font-size:9px!important}
+.catalog-header{padding-top:0!important}
+.catalog-tools{margin-bottom:8px!important}
+.filter-chips,.level-row{gap:5px!important}
+.filter-chips button,.level-row button{padding:5px 9px!important;font-size:9px!important;border-radius:6px!important}
+.course-count strong{font-size:10px!important}
+.course-count select{padding:5px 8px!important;font-size:10px!important}
+.all-course-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important;gap:9px!important}
+.course-card{border-radius:10px!important}
+.course-img{height:118px!important}
+.course-body{padding:8px!important}
+.tag,.level{font-size:7px!important;padding:3px 5px!important}
+.course-card h3{font-size:12px!important;line-height:1.32!important;min-height:32px!important;margin:5px 0!important}
+.course-meta{font-size:7px!important;gap:6px!important}
 
 @media (min-width:1450px){
   .student-shell{grid-template-columns:minmax(0,1fr) 190px!important}
-  .compact-dashboard{grid-template-columns:230px minmax(0,1fr) 215px!important}
+  .overview-dashboard{grid-template-columns:minmax(0,1fr) 245px}
   .all-course-grid,.my-courses-grid{grid-template-columns:repeat(4,minmax(0,1fr))!important}
+}
+
+@media(max-width:1280px){
+  .overview-dashboard{grid-template-columns:1fr 220px;grid-template-areas:"welcome profile" "metrics metrics" "activity activity"}
+  .overview-metrics{grid-template-columns:repeat(5,1fr)}
+  .overview-activity{grid-template-columns:150px minmax(0,1fr)}
+}
+
+@media(max-width:980px){
+  .overview-dashboard{grid-template-columns:1fr;grid-template-areas:"welcome" "profile" "metrics" "activity"}
+  .overview-metrics{grid-template-columns:repeat(3,1fr)}
+  .overview-profile{grid-template-columns:58px 1fr}
+}
+
+@media(max-width:620px){
+  .overview-welcome h1{font-size:24px}
+  .overview-metrics{grid-template-columns:repeat(2,1fr)}
+  .overview-activity{display:block}
+  .overview-activity .compact-bars{margin-top:8px!important}
+  .my-courses-grid,.all-course-grid{grid-template-columns:1fr!important}
 }
