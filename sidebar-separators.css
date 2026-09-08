@@ -1,14 +1,42 @@
 /* Sidebar button separation refinements */
 @media (min-width:681px){
+  .sidebar{
+    height:100vh;
+    overflow:hidden;
+  }
+
+  .sidebar-scroll{
+    padding:8px 8px 10px;
+    overflow-y:auto;
+    min-height:0;
+  }
+
   .sidebar-nav{
-    gap:10px;
+    gap:6px;
   }
 
   .sidebar-link{
-    min-height:56px;
+    min-height:46px;
+    height:46px;
+    padding:0 13px;
+    border-radius:13px;
     border:1px solid rgba(255,255,255,.065);
     background:rgba(255,255,255,.025);
     box-shadow:inset 0 1px 0 rgba(255,255,255,.018);
+  }
+
+  .sidebar-label{
+    font-size:14px;
+  }
+
+  .sidebar-icon{
+    width:22px;
+    height:22px;
+  }
+
+  .sidebar-icon svg{
+    width:19px;
+    height:19px;
   }
 
   .sidebar-link:hover{
@@ -19,12 +47,12 @@
   .sidebar-link.active{
     border-color:rgba(124,181,255,.30);
     background:linear-gradient(90deg,#2393ff 0%,#4c4cff 100%);
-    box-shadow:inset 0 1px 0 rgba(255,255,255,.20),0 14px 28px rgba(34,98,255,.26);
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.20),0 10px 20px rgba(34,98,255,.22);
   }
 
   .nav-group{
-    padding-bottom:16px;
-    margin-bottom:16px;
+    padding-bottom:10px;
+    margin-bottom:10px;
     border-bottom:1px solid rgba(255,255,255,.085);
   }
 
@@ -39,11 +67,76 @@
   }
 
   .nav-group-title{
-    margin-bottom:12px;
+    margin:6px 8px 8px;
+    font-size:10px;
+  }
+
+  .sidebar-promo{
+    min-height:118px;
+    margin:8px 10px 10px;
+    padding:12px 10px 10px;
+    flex:0 0 auto;
+  }
+
+  .promo-icon{
+    width:40px;
+    height:40px;
+    margin-bottom:5px;
+  }
+
+  .promo-icon svg{
+    width:28px;
+    height:28px;
+  }
+
+  .sidebar-promo h3{
+    font-size:14px;
+  }
+
+  .sidebar-promo p{
+    font-size:11px;
+    margin-top:3px;
   }
 }
 
-/* Keep the mobile bottom navigation clean while still separating its buttons */
+@media (min-width:681px) and (max-height:800px){
+  .sidebar-link{
+    min-height:42px;
+    height:42px;
+  }
+
+  .sidebar-nav{
+    gap:5px;
+  }
+
+  .nav-group{
+    padding-bottom:8px;
+    margin-bottom:8px;
+  }
+
+  .nav-group-title{
+    margin:4px 8px 6px;
+  }
+
+  .sidebar-promo{
+    min-height:100px;
+    margin:6px 10px 8px;
+    padding-top:9px;
+  }
+
+  .promo-icon{
+    width:34px;
+    height:34px;
+    margin-bottom:2px;
+  }
+
+  .promo-icon svg{
+    width:24px;
+    height:24px;
+  }
+}
+
+/* Mobile drawer keeps comfortable touch targets */
 @media (max-width:680px){
   .sidebar-scroll .sidebar-nav{
     gap:7px;
