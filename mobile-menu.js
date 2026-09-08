@@ -1,1 +1,34 @@
-document.addEventListener('DOMContentLoaded',()=>{const sidebar=document.querySelector('.sidebar');const brandMark=document.querySelector('.brand-mark');if(!sidebar||!brandMark)return;brandMark.setAttribute('role','button');brandMark.setAttribute('tabindex','0');brandMark.setAttribute('aria-label','פתיחת תפריט');brandMark.setAttribute('aria-expanded','false');const close=()=>{document.body.classList.remove('mobile-menu-open');brandMark.setAttribute('aria-expanded','false')};const toggle=()=>{const open=document.body.classList.toggle('mobile-menu-open');brandMark.setAttribute('aria-expanded',String(open))};brandMark.addEventListener('click',toggle);brandMark.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();toggle()}});document.addEventListener('click',e=>{if(window.innerWidth<=680&&document.body.classList.contains('mobile-menu-open')&&!sidebar.contains(e.target)&&!brandMark.contains(e.target))close()});document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});sidebar.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=680)close()}));});
+document.addEventListener('DOMContentLoaded',()=>{
+  const sidebar=document.querySelector('.sidebar');
+  if(!sidebar)return;
+
+  const button=document.createElement('button');
+  button.className='mobile-hamburger';
+  button.type='button';
+  button.setAttribute('aria-label','פתיחת תפריט');
+  button.setAttribute('aria-expanded','false');
+  button.innerHTML='<span></span><span></span><span></span>';
+  document.body.appendChild(button);
+
+  const close=()=>{
+    document.body.classList.remove('mobile-menu-open');
+    button.setAttribute('aria-expanded','false');
+    button.setAttribute('aria-label','פתיחת תפריט');
+  };
+
+  const toggle=()=>{
+    const open=document.body.classList.toggle('mobile-menu-open');
+    button.setAttribute('aria-expanded',String(open));
+    button.setAttribute('aria-label',open?'סגירת תפריט':'פתיחת תפריט');
+  };
+
+  button.addEventListener('click',e=>{e.stopPropagation();toggle()});
+
+  document.addEventListener('click',e=>{
+    if(window.innerWidth<=680&&document.body.classList.contains('mobile-menu-open')&&!sidebar.contains(e.target)&&!button.contains(e.target))close();
+  });
+
+  document.addEventListener('keydown',e=>{if(e.key==='Escape')close()});
+  sidebar.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{if(window.innerWidth<=680)close()}));
+  window.addEventListener('resize',()=>{if(window.innerWidth>680)close()});
+});
