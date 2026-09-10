@@ -1,1 +1,16 @@
 @import url('../option1/course.css');
+
+/* Option 5 curriculum layout fix */
+.course-sidebar .curriculum-list{padding-left:0;overflow-x:hidden}
+.course-sidebar .curriculum-section{margin:0 0 18px}
+.course-sidebar .curriculum-section h3{font-size:14px;line-height:1.4;color:#0b2037;margin:8px 0 6px;padding:10px 0 8px;border-bottom:1px solid #cbd6e2}
+.course-sidebar .curriculum-item{display:grid;grid-template-columns:28px minmax(0,1fr) 24px;gap:10px;align-items:center;padding:12px 0;border-bottom:1px solid #d8e0e9;text-decoration:none;direction:rtl;transition:background .15s ease}
+.course-sidebar .curriculum-item:hover{background:rgba(255,255,255,.45)}
+.course-sidebar .curriculum-num{font-size:12px;font-weight:700;color:#8b99a8;text-align:center;line-height:1}
+.course-sidebar .curriculum-item>span:nth-child(2){min-width:0;display:block}
+.course-sidebar .curriculum-item strong{display:block;font-size:13px;line-height:1.45;color:#0e2034;word-break:normal;overflow-wrap:break-word}
+.course-sidebar .curriculum-item small{display:block;margin-top:4px;color:#617489;font-size:11px;line-height:1.35}
+.course-sidebar .curriculum-item b{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#fff;border:1px solid #d9e2ec;color:#d79a00;font-size:9px;font-weight:900;line-height:1}
+.course-sidebar .curriculum-item:hover b{background:#f6b81f;border-color:#f6b81f;color:#061426}
+.course-sidebar .curriculum-item:hover strong{color:#1f63d8}
+@media(max-width:980px){.course-sidebar .curriculum-item{grid-template-columns:26px minmax(0,1fr) 22px;gap:9px}.course-sidebar .curriculum-item b{width:22px;height:22px;font-size:8px}}
